@@ -1,0 +1,6 @@
+usr/include/*
+usr/lib/lib*.a
+usr/lib/lib*.so
+#usr/local/tclplus/include/*
+#usr/local/tclplus/lib/lib*.a
+#usr/local/tclplus/lib/lib*.so

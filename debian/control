@@ -1,0 +1,23 @@
+Source: libtclplus
+Priority: extra
+Maintainer: Ryan Blair <blair@nscl.msu.edu>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, tcl8.5-dev, tk8.5-dev
+Standards-Version: 3.9.3
+Section: libs
+Homepage: http://sourceforge.net/projects/nscldaq
+#Vcs-Git: git://git.debian.org/collab-maint/libtclplus.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/libtclplus.git;a=summary
+
+Package: libtclplus-dev
+Section: libdevel
+Architecture: any
+Depends: libtclplus (= ${binary:Version})
+Description: libtclPlus and libException from NSCLDAQ - development bits
+ libtclPlus and libException from NSCLDAQ - headers and static libraries
+
+Package: libtclplus
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libtclPlus and libException from NSCLDAQ
+ libtclPlus and libException from NSCLDAQ

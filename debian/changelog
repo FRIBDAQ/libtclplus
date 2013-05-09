@@ -1,0 +1,5 @@
+libtclplus (1.0) unstable; urgency=low
+
+  * Initial release as a split library
+
+ -- Ryan Blair <blair@nscl.msu.edu>  Thu, 09 May 2013 13:18:44 -0400

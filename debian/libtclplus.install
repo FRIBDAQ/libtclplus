@@ -1,0 +1,4 @@
+usr/bin/*
+#usr/local/tclplus/bin/*
+usr/lib/lib*.so.*
+#usr/local/tclplus/lib/lib*.so.*
