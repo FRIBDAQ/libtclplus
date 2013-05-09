@@ -61,7 +61,25 @@ if test "$with_tcl" != "no"; then
     # Do we know where to get a tclsh?
     if test "${TCLSH}" != "unknown"; then
       AC_MSG_CHECKING([where Tcl says it lives])
-      TclLibBase=`echo puts \\\$tcl_library | ${TCLSH} | sed -e 's,[^/]*$,,'`
+      #
+      # See if Tcl can tell us where it is:
+      #
+      tclClaims=`echo puts \\\$tcl_library | ${TCLSH} | sed -e 's,[^/]*$,,'`
+      AC_MSG_CHECKING([$tclClaims])
+      if test -f $tclClaims/tclConfig.sh; then
+        TclLibBase=${tclClaims}
+      else
+          #If not try /usr/lib/tcl$version where some (debian e.g.) put it:
+	  
+	  version=`echo puts \\\$tcl_version | ${TCLSH}`
+          libloc=/usr/lib/tcl${version}
+          AC_MSG_CHECKING($libloc)
+          if test -f $libloc/tclConfig.sh; then
+             TclLibBase=$libloc
+          else 
+             AC_MSG_ERROR([Can't find tclConfig.sh you'll need to use --with-tclconfig to tell me where it is])
+          fi
+      fi
       AC_MSG_RESULT($TclLibBase)
     fi
   fi
