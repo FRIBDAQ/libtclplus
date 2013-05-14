@@ -16,10 +16,10 @@ include_HEADERS = \
 	@top_srcdir@/include/exception/MonitorException.h \
 	@top_srcdir@/include/exception/CInvalidArgumentException.h \
 	@top_srcdir@/include/exception/CDuplicateSingleton.h \
-	@top_srcdir@/include/exception/CNoSuchObjectException.h
+	@top_srcdir@/include/exception/CNoSuchObjectException.h \
+	@top_srcdir@/include/daqdatatypes.h
 
-noinst_HEADERS = @top_srcdir@/include/exception/Asserts.h \
-	$(top_srcdir)/include/daqdatatypes.h
+noinst_HEADERS = @top_srcdir@/include/exception/Asserts.h 
 
 EXTRA_DIST=exceptions.xml
 
