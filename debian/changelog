@@ -2,7 +2,7 @@ libtclplus (10.2-002-2) unstable; urgency=low
 
   * Updates from svn, including daqdatatypes header
 
- -- Ryan Blair <blair@nscl.msu.edu>  Thu, 09 May 2013 13:18:44 -0400
+ -- Ryan Blair <blair@nscl.msu.edu>  Thu, 16 May 2013 14:04:46 -0400
 
 libtclplus (1.0) unstable; urgency=low
 
