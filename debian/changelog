@@ -1,4 +1,4 @@
-libtclplus (1.2-001) unstable; urgency=low
+libtclplus (10.2-003) unstable; urgency=low
 	
    * Updates to support exit when TCLLiveEventLoop loses stdin.
 
