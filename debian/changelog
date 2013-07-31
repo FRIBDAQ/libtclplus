@@ -1,3 +1,9 @@
+libtclplus (1.2-001) unstable; urgency=low
+	
+   * Updates to support exit when TCLLiveEventLoop loses stdin.
+
+ -- Ron Fox <fox@nscl.msu.edu>  Wed,  31 Aug 2013 15:00:00 -0400
+
 libtclplus (10.2-002-2) unstable; urgency=low
 
   * Updates from svn, including daqdatatypes header
@@ -9,11 +15,5 @@ libtclplus (1.0) unstable; urgency=low
   * Initial release as a split library
 
  -- Ryan Blair <blair@nscl.msu.edu>  Thu, 09 May 2013 13:18:44 -0400
-
-libtclplus (1.2-001) unstable; urgency=low
-	
-   * Updates to support exit when TCLLiveEventLoop loses stdin.
-
- -- Ron Fox <fox@nscl.msu.edu>  Wed,  31 Aug 2013 15:00:00 -0400
 
 	
