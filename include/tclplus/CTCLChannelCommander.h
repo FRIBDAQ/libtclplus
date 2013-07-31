@@ -92,6 +92,7 @@ public:
   virtual void prompt1();
   virtual void prompt2();
   virtual void sendPrompt(std::string prompt);
+  bool stopped() const;
 
   // utilities.
 

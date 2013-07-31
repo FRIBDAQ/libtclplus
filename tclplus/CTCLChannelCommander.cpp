@@ -89,7 +89,10 @@ CTCLChannelCommander::start()
 void
 CTCLChannelCommander::stop()
 {
-  Tcl_DeleteChannelHandler(m_channel, inputRelay, this);
+  if (m_channel){ 
+    Tcl_DeleteChannelHandler(m_channel, inputRelay, this);
+    m_channel = 0;
+  }
 }
 
 /*!
@@ -101,7 +104,15 @@ CTCLChannelCommander::getChannel() const
 {
   return m_channel;
 }
-
+/**
+ * stopped
+ *   Returns true if the channel has stopped (due to eof).
+ */
+bool
+CTCLChannelCommander::stopped() const
+{
+  return m_channel == 0;
+}
 ////////////////////////////////////////////////////////////////////////////
 
 
