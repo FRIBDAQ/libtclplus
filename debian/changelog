@@ -1,3 +1,10 @@
+
+libtclplus (10.2-004) unstable; urgency=low
+
+   * Ensure -pedantic compiles work against the headers.
+
+  -- Ron Fox <fox@nscl.msu.edu> Thur 12 Sep 2013 15:10:00 -0400
+
 libtclplus (10.2-003) unstable; urgency=low
 	
    * Updates to support exit when TCLLiveEventLoop loses stdin.

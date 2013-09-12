@@ -227,12 +227,12 @@ public:
 		   Tcl_CmdProc* pCommandProcessor, 
 		   ClientData pData, 
 		   Tcl_CmdDeleteProc* pDeleteProcessor=
-		   reinterpret_cast<Tcl_CmdDeleteProc*>((void(*)())kpNULL)) const  ;
+		   reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(kpNULL))) const  ;
   void AddCommand(const std::string& rCommandName,
 		  Tcl_CmdProc* pCommandProcessor,
 		  ClientData pData,
 		  Tcl_CmdDeleteProc* pDeleteProcessor = 
-		                    reinterpret_cast<Tcl_CmdDeleteProc*>((void(*)())kpNULL)) const {
+		                    reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(kpNULL))) const {
     AddCommand(rCommandName.c_str(), pCommandProcessor, pData, 
 	       pDeleteProcessor);
   }
@@ -240,7 +240,7 @@ public:
 		  Tcl_CmdProc* pCommandProcessor,
 		  ClientData pData,
 		  Tcl_CmdDeleteProc* pDeleteProcessor = 
-		                       reinterpret_cast<Tcl_CmdDeleteProc*>((void(*)())kpNULL)) const {
+		                       reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(kpNULL))) const {
     AddCommand((const char*)(rCommandName), pCommandProcessor,
 	       pData, pDeleteProcessor);
   }
