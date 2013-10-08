@@ -1,26 +1,31 @@
+libtclplus (10.2-005) unstable; urgency=low
+
+  * Fix libexception unit tests builds.
+
+ -- Ron Fox <fox@nscl.msu.edu> Tue, 8 Oct 2013 10:25:00 -0400
 
 libtclplus (10.2-004) unstable; urgency=low
 
-   * Ensure -pedantic compiles work against the headers.
+  * Ensure -pedantic compiles work against the headers.
 
-  -- Ron Fox <fox@nscl.msu.edu> Thur 12 Sep 2013 15:10:00 -0400
+ -- Ron Fox <fox@nscl.msu.edu> Thu, 12 Sep 2013 15:10:00 -0400
 
 libtclplus (10.2-003) unstable; urgency=low
 	
-   * Updates to support exit when TCLLiveEventLoop loses stdin.
-
- -- Ron Fox <fox@nscl.msu.edu>  Wed,  31 Aug 2013 15:00:00 -0400
+  * Updates to support exit when TCLLiveEventLoop loses stdin.
+	
+ -- Ron Fox <fox@nscl.msu.edu>  Wed, 31 Aug 2013 15:00:00 -0400
 
 libtclplus (10.2-002-2) unstable; urgency=low
 
   * Updates from svn, including daqdatatypes header
 
- -- Ryan Blair <blair@nscl.msu.edu>  Thu, 16 May 2013 14:04:46 -0400
+ -- Ryan Blair <blair@nscl.msu.edu> Thu, 16 May 2013 14:04:46 -0400
 
 libtclplus (1.0) unstable; urgency=low
 
   * Initial release as a split library
 
- -- Ryan Blair <blair@nscl.msu.edu>  Thu, 09 May 2013 13:18:44 -0400
+ -- Ryan Blair <blair@nscl.msu.edu> Thu, 09 May 2013 13:18:44 -0400
 
 	

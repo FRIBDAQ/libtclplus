@@ -43,6 +43,6 @@ install-data-local:
 noinst_PROGRAMS = unittests
 unittests_SOURCES = TestRunner.cpp testException.cpp testErrnoException.cpp \
 	testStreamIOError.cpp testRangeError.cpp
-unittests_LDADD   = @CPPUNIT_LIBS@ -lException
+unittests_LDADD   = @CPPUNIT_LIBS@ libException.la
 TESTS=./unittests
 
