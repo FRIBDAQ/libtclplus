@@ -1,0 +1,19 @@
+#!/bin/bash -xe
+
+
+rm -rf /tmp/libtcl++
+
+version=`grep AC_INIT configure.ac | cut -f2 -d" " | sed s/,//`
+
+rm -rf libtclplus-${version}
+
+tar xzf libtclplus-${version}.tar.gz
+cd libtclplus-${version}
+
+./configure --prefix=/tmp/libtcl++
+make clean all
+make install
+make check
+
+rm -rf libtclplus-${version}
+rm -rf /tmp/libtcl++
