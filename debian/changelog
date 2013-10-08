@@ -11,9 +11,9 @@ libtclplus (10.2-004) unstable; urgency=low
  -- Ron Fox <fox@nscl.msu.edu> Thu, 12 Sep 2013 15:10:00 -0400
 
 libtclplus (10.2-003) unstable; urgency=low
-	
+
   * Updates to support exit when TCLLiveEventLoop loses stdin.
-	
+
  -- Ron Fox <fox@nscl.msu.edu>  Wed, 31 Aug 2013 15:00:00 -0400
 
 libtclplus (10.2-002-2) unstable; urgency=low
@@ -28,4 +28,4 @@ libtclplus (1.0) unstable; urgency=low
 
  -- Ryan Blair <blair@nscl.msu.edu> Thu, 09 May 2013 13:18:44 -0400
 
-	
+
