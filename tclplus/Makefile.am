@@ -10,6 +10,7 @@ AM_LDFLAGS = -L. @TCL_LIBS@ -L$(top_srcdir)/exception
 lib_LTLIBRARIES = libtclPlus.la
 
 libtclPlus_la_LDFLAGS = -version-info $(SOVERSION) \
+	@top_builddir@/exception/libException.la \
 	-Wl,"-rpath-link=$(libdir)" @PTHREAD_LIBS@
 
 libtclPlus_la_CXXFLAGS = @PTHREAD_CFLAGS@ $(AM_CXXFLAGS)
@@ -88,7 +89,7 @@ evttclsh_SOURCES	= 	evttclsh.cpp
 evttclsh_DEPENDENCIES	= 	libtclPlus.la
 
 evttclsh_LDADD		= 	libtclPlus.la \
-				@top_srcdir@/exception/libException.la \
+				@top_builddir@/exception/libException.la \
 				@TCL_LIBS@
 evttclsh_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@
 
@@ -102,19 +103,19 @@ EXTRA_DIST = tkAppInit.c tclplus.xml
  noinst_PROGRAMS = tracetests interptests tcpservertest
 
 tracetests_SOURCES = TestRunner.cpp \
- 			ccallbacktest.cpp \
- 			tracevartest.cpp
+			ccallbacktest.cpp \
+			tracevartest.cpp
 
 tracetests_DEPENDENCIES = $(testableObjects)
 
  TestLdflags = $(testableObjects) $(CPPUNIT_LDFLAGS) \
- 	-L@top_srcdir@/exception -lException
+	-L@top_srcdir@/exception -lException
  # $(X11EXTRA_LDFLAGS)
 
  tracetests_LDADD = $(TestLdflags) @TCL_LIBS@ @CPPUNIT_LIBS@
 
  interptests_SOURCES=interpretertest.cpp objecttest.cpp resulttest.cpp \
- 	objcommandtest.cpp compatcommand.cpp packagetests.cpp
+	objcommandtest.cpp compatcommand.cpp packagetests.cpp
 
  interptests_LDADD = TestRunner.lo $(TestLdflags) @CPPUNIT_LIBS@
 
@@ -123,8 +124,8 @@ interptests_DEPENDENCIES = $(testableObjects) TestRunner.lo
 tcpservertest_SOURCES	= 	tcpservertest.cpp
 tcpservertest_DEPENDENCIES	= 	libtclPlus.la
 tcpservertest_LDADD		= 	libtclPlus.la	\
- 				@top_srcdir@/exception/libException.la \
- 			@TCL_LIBS@ @CPPUNIT_LIBS@
+				@top_srcdir@/exception/libException.la \
+			@TCL_LIBS@ @CPPUNIT_LIBS@
 tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 
  TESTS = ./tracetests ./interptests

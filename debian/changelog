@@ -1,3 +1,9 @@
+libtclplus (10.2-006) unstable; urgency=low
+
+  * Link tcl++ library to libException .
+
+ -- Ron Fox <fox@nscl.msu.edu> Thu, 30 Jan 2014 15:38:00 -0400
+
 libtclplus (10.2-005) unstable; urgency=low
 
   * Fix libexception unit tests builds.
