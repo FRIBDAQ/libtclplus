@@ -1,5 +1,5 @@
 AC_PREREQ(2.61)
-AC_INIT(libtclplus, 1.2-006, fox@nscl.msu.edu)
+AC_INIT(libtclplus, 2.0-000, fox@nscl.msu.edu)
 
 AC_CONFIG_SRCDIR([tclplus/TCLInterpreter.cpp])
 AC_CONFIG_HEADER([config.h])
@@ -19,7 +19,7 @@ LT_INIT
 AC_SUBST([LIBTOOL_DEPS])
 
 # Makefile exports:
-SOVERSION="1:0:0"
+SOVERSION="2:0:0"
 AC_SUBST(SOVERSION)
 
 # specfic checks
