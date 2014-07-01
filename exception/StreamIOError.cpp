@@ -349,12 +349,12 @@ const char* CStreamIOError::ReasonText()   const
 //////////////////////////////////////////////////////////////////////////////
 //
 //  Function:       
-//     ReasonCode()
+//  int ReasonCode()
 //  Operation Type: 
 //     selector
-Int_t CStreamIOError::ReasonCode()  const
+int CStreamIOError::ReasonCode()  const
 {
   // Casts the error reason to an int and returns it.
   
-  return (Int_t)m_eReason;
+  return (int)m_eReason;
 }

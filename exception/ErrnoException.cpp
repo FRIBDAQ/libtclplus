@@ -320,11 +320,11 @@ CErrnoException::ReasonText() const
 //////////////////////////////////////////////////////////////////////////
 //
 //  Function:   
-//    Int_t ReasonCode (  )
+//    int ReasonCode (  )
 //  Operation Type:
 //     Selector.
 //
-Int_t 
+int 
 CErrnoException::ReasonCode() const 
 {
   return m_nErrno;

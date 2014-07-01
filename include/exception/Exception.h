@@ -33,15 +33,12 @@
 #ifndef __EXCEPTION_H  //Required for current class
 #define __EXCEPTION_H
 
-#ifndef __HISTOTYPES_H
-#include <daqdatatypes.h>
-#endif
-
 #ifndef __STL_STRING
 #include <string>
 #define __STL_STRING
 #endif
 
+#define kACTIONSIZE 1024 // Size of action message.
                                
 class CException      
 {
@@ -92,7 +89,7 @@ protected:
 
 public:
   virtual const char* ReasonText () const  ;
-  virtual Int_t ReasonCode () const  ;
+  virtual int ReasonCode () const  ;
   const char* WasDoing () const  ;
 
   // Utility functions:

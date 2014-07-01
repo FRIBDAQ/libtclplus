@@ -126,11 +126,11 @@ CException::ReasonText() const
 //////////////////////////////////////////////////////////////////////////
 //
 //  Function:   
-//    Int_t ReasonCode (  )
+//    int ReasonCode (  )
 //  Operation Type:
 //     Selector
 //
-Int_t 
+int 
 CException::ReasonCode() const 
 {
 // Returns a code which describes the reason for the

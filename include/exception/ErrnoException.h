@@ -38,10 +38,6 @@
 #include "Exception.h"
 #endif                               
   
-#ifndef __HISTOTYPES_H
-#include <daqdatatypes.h>
-#endif
-
 #ifndef __CRTL_ERRNO_H
 #include <errno.h>
 #define __CRTL_ERRNO_H
@@ -55,7 +51,7 @@
   
 class CErrnoException  : public CException        
 {
-  Int_t m_nErrno;  // // Snapshot of errno at construction time.
+  int m_nErrno;  // // Snapshot of errno at construction time.
   
 public:
 
@@ -102,13 +98,13 @@ public:
   // Selectors:  Note typically these are not needed.
                
 public:
-  Int_t getErrno() const
+  int getErrno() const
   {
     return m_nErrno;
   }
   // Mutating selectors:  For derived classes only.
 protected:                   
-  void setErrno(Int_t am_nErrno)
+  void setErrno(int am_nErrno)
   { 
     m_nErrno = am_nErrno;
   }                   
@@ -117,7 +113,7 @@ protected:
 public:
 
   virtual   const char* ReasonText () const  ;
-  virtual   Int_t       ReasonCode () const  ;
+  virtual   int       ReasonCode () const  ;
  
 };
 

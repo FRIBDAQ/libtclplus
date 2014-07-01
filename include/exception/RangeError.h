@@ -47,9 +47,9 @@
                                
 class CRangeError  : public CException        
 {
-  Int_t m_nLow;			// Lowest allowed value for range (inclusive).
-  Int_t m_nHigh;		// Highest allowed value for range.
-  Int_t m_nRequested;		// Actual requested value which is outside
+  int m_nLow;			// Lowest allowed value for range (inclusive).
+  int m_nHigh;		// Highest allowed value for range.
+  int m_nRequested;		// Actual requested value which is outside
 				// of the range.
   std::string m_ReasonText;            // Reason text will be built up  here.
 public:
@@ -62,14 +62,14 @@ public:
   };
 			//Constructors with arguments
 
-  CRangeError (  Int_t nLow,  Int_t nHigh,  Int_t nRequested,
+  CRangeError (  int nLow,  int nHigh,  int nRequested,
 		 const char* pDoing) :       
     CException(pDoing),
     m_nLow (nLow),  
     m_nHigh (nHigh),  
     m_nRequested (nRequested)
   { UpdateReason(); }
-  CRangeError(Int_t nLow, Int_t nHigh, Int_t nRequested,
+  CRangeError(int nLow, int nHigh, int nRequested,
 	  const std::string& rDoing) :
     CException(rDoing),
     m_nLow(nLow),
@@ -126,32 +126,32 @@ public:
   //             for CException.
 public:                             
 
-  Int_t getLow() const
+  int getLow() const
   {
     return m_nLow;
   }
-  Int_t getHigh() const
+  int getHigh() const
   {
     return m_nHigh;
   }
-  Int_t getRequested() const
+  int getRequested() const
   {
     return m_nRequested;
   }
   // Mutators - These can only be used by derived classes:
 
 protected:
-  void setLow (Int_t am_nLow)
+  void setLow (int am_nLow)
   { 
     m_nLow = am_nLow;
     UpdateReason();
   }
-  void setHigh (Int_t am_nHigh)
+  void setHigh (int am_nHigh)
   { 
     m_nHigh = am_nHigh;
     UpdateReason();
   }
-  void setRequested (Int_t am_nRequested)
+  void setRequested (int am_nRequested)
   { 
     m_nRequested = am_nRequested;
     UpdateReason();
@@ -161,7 +161,7 @@ protected:
   //
 public:                    
   virtual   const char* ReasonText () const  ;
-  virtual   Int_t ReasonCode () const  ;
+  virtual   int ReasonCode () const  ;
  
   // Protected utilities:
   //

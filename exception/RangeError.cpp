@@ -328,11 +328,11 @@ CRangeError::ReasonText() const
 //////////////////////////////////////////////////////////////////////////
 //
 //  Function:   
-//    Int_t ReasonCode (  )
+//    int ReasonCode (  )
 //  Operation Type:
 //     Selector
 //
-Int_t 
+int
 CRangeError::ReasonCode() const 
 {
 // Returns:

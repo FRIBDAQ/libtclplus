@@ -154,7 +154,7 @@ CURIFormatException::ReasonText() const
   \return Int_t
   \retval -1
 */
-Int_t
+int
 CURIFormatException::ReasonCode() const
 {
   return -1;

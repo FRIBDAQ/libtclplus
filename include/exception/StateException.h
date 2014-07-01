@@ -57,7 +57,7 @@ public:
   // Overrides so this can function correctly as a CException:
 
   virtual const char* ReasonText() const;
-  virtual  Int_t ReasonCode() const;
+  virtual  int ReasonCode() const;
 
 };
 

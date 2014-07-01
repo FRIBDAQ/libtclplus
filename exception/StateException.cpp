@@ -113,7 +113,7 @@ CStateException::ReasonText() const
 /*!
    Reason code is always meaningless so we return a -1.
 */
-Int_t
+int
 CStateException::ReasonCode() const
 {
   return -1;

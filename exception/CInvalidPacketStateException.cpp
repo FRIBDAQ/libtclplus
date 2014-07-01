@@ -340,10 +340,10 @@ CInvalidPacketStateException::operator==(const CInvalidPacketStateException& rhs
     cast to integer.
 
 */
-Int_t 
+int 
 CInvalidPacketStateException::ReasonCode() const  
 {
-  return (Int_t)m_nWasOpen;
+  return (int)m_nWasOpen;
 }  
 
 /*!
