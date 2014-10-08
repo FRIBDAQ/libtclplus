@@ -532,6 +532,11 @@ public:
   std::string TildeSubst (const std::string&amp; rName) const;
   Tcl_Interp* operator-&gt; ();
   operator Tcl_Interp* ();
+  
+  void setResult(const char* resultString);
+  void setResult(std::string resultString);
+  void setResult(Tcl_Obj* resultObj);
+  void setResult(CTCLObject&amp; resultObj);
 };
 
 
@@ -747,6 +752,53 @@ public:
             <function>operator Tcl_Interp*</function> supports dynamic type conversion from
             a <classname>CTCLInterpreteter</classname> object and a <type>Tcl_Interp*</type>
             pointer.
+        </para>
+        <para>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void</type>
+                <methodname>setResult</methodname>
+                <methodparam>
+                    <type>const char*</type> <parameter> resultString</parameter>
+                </methodparam>
+                
+                <modifier></modifier>
+            </methodsynopsis>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void</type>
+                <methodname>setResult</methodname>
+                <methodparam>
+                    <type>std::string</type> <parameter>resultString</parameter>
+                </methodparam>
+                <modifier></modifier>
+            </methodsynopsis>
+            
+            Provides a method for setting the result of a command from a text
+            string object.  These map to calls to <literal>Tcl_SetResult</literal>
+        </para>
+        <para>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void</type>
+                <methodname>setResult</methodname>
+                <methodparam>
+                    <type>Tcl_Obj*</type> <parameter>resultObj</parameter>
+                </methodparam>
+                <modifier></modifier>
+            </methodsynopsis>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void</type>
+                <methodname>setresult</methodname>
+                <methodparam>
+                    <type>CTCLObject&amp;</type> <parameter>resultObj</parameter>
+                </methodparam>
+                <exceptionname></exceptionname>
+                <modifier></modifier>
+            </methodsynopsis>
+            Sets the result via a Tcl_Obj based entity.  These calls map to
+            <literal>Tcl_SetObjresult</literal>.
         </para>
     </refsect1>
     <refsect1>
@@ -1489,6 +1541,12 @@ public:
   virtual int operator()(CTCLInterpreter&amp; interp,
                          std::vector&lt;CTCLObject&gt;&amp; objv) = 0;
   virtual void onUnregister();
+protected:
+  void bindAll(CTCLInterpreter&amp; interp, std::vector&lt;CTCLObject&gt;&amp; objv);
+  void requireAtLeast(std::vector&lt;CTCLObject&gt;&amp; objv, unsigned n, const char* msg=0) const;
+  void requireAtMost(std::vector&lt;CTCLObject&gt;&amp; objv, unsigned n, const char* msg=0) const;
+  void requireExactly(std::vector&lt;CTCLObject&gt;&amp; objv, unsigned n, const char* msg=0) const;
+  
 
 };
 
@@ -1605,6 +1663,94 @@ virtual void onUnregister();
             <function>unregister</function>.  The default behavior is to do nothing, but
             this can be overidden in your derived class if desired.
         </para>
+        <para>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void </type>
+                <methodname>bindAll</methodname>
+                <methodparam>
+                    <type>CTCLInterpreter&amp; </type> <parameter>interp</parameter>
+                </methodparam>
+                <methodparam>
+                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
+                </methodparam>
+                <modifier></modifier>
+            </methodsynopsis>
+            Bind the <parameter>interp</parameter> to all of the objects in <parameter>objv</parameter>.
+            This is normally used by command processors to bind their command words.  This
+            is necessary because there are some operations on
+            <classname>CTCLObject</classname> objects that are only possible if they've
+            been bound to an interpreter.
+        </para>
+        <para>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>  void </type>
+                <methodname>requireAtLeast  </methodname>
+                <methodparam>
+                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
+                </methodparam>
+                <methodparam>
+                    <type>unsigned </type> <parameter>n</parameter>
+                </methodparam>
+                <methodparam>
+                    <type>const char* </type> <parameter>msg </parameter><initializer>0</initializer>
+                </methodparam>
+                <exceptionname>std::string</exceptionname>
+                <modifier>const</modifier>
+            </methodsynopsis>
+            Throws a <classname>std::string</classname> exception if the <parameter>objv</parameter> array
+            has fewer than <parameter>n</parameter> elements.  If
+            <parameter>msg</parameter> is not null it is included in the
+            string that is thrown.
+        </para>
+        <para>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void  </type>
+                <methodname>requireAtMost</methodname>
+                <methodparam>
+                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
+                </methodparam>
+                <methodparam>
+                    <type>unsigned</type> <parameter> n</parameter>
+                </methodparam>
+                <methodparam>
+                    <modifier>const </modifier><type>char* </type>
+                    <parameter>msg</parameter> <initializer>0</initializer>
+                </methodparam>
+                <exceptionname>std::string</exceptionname>
+                <modifier>const</modifier>
+            </methodsynopsis>
+            Same as <methodname>requireAtLeast</methodname> but throws when
+            <parameter>objv</parameter> has more than <parameter>n</parameter>
+            elements.
+        </para>
+        <para>
+            <methodsynopsis>
+                <modifier></modifier>
+                <type>void </type>
+                <methodname>requireExactly</methodname>
+                <methodparam>
+                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
+                </methodparam>
+                <methodparam>
+                    <type>unsigned </type><parameter>n</parameter>
+                </methodparam>
+                <methodparam>
+                    <modifier>const </modifier><type>char* </type>
+                    <parameter>msg</parameter><initializer>0</initializer>
+                </methodparam>
+                <exceptionname>std::string</exceptionname>
+                <modifier> const</modifier>
+            </methodsynopsis>
+            Same as <methodname>requireAtLeast</methodname> but throws if
+            <parameter>objv</parameter> does not have eactly
+            <parameter>n</parameter> elements.
+        </para>
+  
+  
+
     </refsect1>
     <refsect1>
         <title>SEE ALSO</title>
