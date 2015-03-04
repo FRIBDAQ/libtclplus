@@ -40,12 +40,31 @@
 
 #include <sys/types.h>
 
-typedef    char		    INT8;
-typedef    unsigned char    UINT8;
-typedef    short	    INT16;
-typedef    unsigned short   UINT16;
-typedef    int		    INT32;
-typedef    unsigned int     UINT32;
+#if __cplusplus > 199711L // i.e. C++98
+// stdint.h is deprecated as of C++11 in favor of <cstdint>
+// The difference is that the types are brought into the std namespace.
+// We can mimic the old behavior by including cstdint and then bringing
+// them into the global scope with the using operator. This is a kludge 
+// but is the best solution for the moment.
+#include <cstdint>
+using std::int8_t;
+using std::uint8_t;
+using std::int16_t;
+using std::uint16_t;
+using std::int32_t;
+using std::uint32_t;
+using std::int64_t;
+using std::uint64_t;
+#else
+#include <stdint.h>
+#endif /* C++ or C */
+
+typedef    int8_t		   INT8;
+typedef    uint8_t     UINT8;
+typedef    int16_t	   INT16;
+typedef    uint16_t    UINT16;
+typedef    int32_t	   INT32;
+typedef    uint32_t    UINT32;
 
 
 #define SHORT_SIGNATURE 0x0102	/*	 
