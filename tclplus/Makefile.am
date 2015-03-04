@@ -1,4 +1,4 @@
-INCLUDES = -I$(top_srcdir)/include \
+AM_CPPFLAGS = -I$(top_srcdir)/include \
 	-I$(top_srcdir)/include/exception \
 	-I$(top_srcdir)/include/tclplus \
 	@TCL_CPPFLAGS@ @CPPUNIT_CFLAGS@ @PTHREAD_CFLAGS@

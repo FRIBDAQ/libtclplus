@@ -29,7 +29,7 @@ libException_la_LDFLAGS = -version-info $(SOVERSION) \
 libException_la_CXXFLAGS	= @PTHREAD_CFLAGS@ 	\
 				$(AM_CXXFLAGS)
 
-INCLUDES = -I@top_srcdir@/include -I@top_srcdir@/include/exception @CPPUNIT_CFLAGS@
+AM_CPPFLAGS = -I@top_srcdir@/include -I@top_srcdir@/include/exception @CPPUNIT_CFLAGS@
 
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)/$(prefix)/include
