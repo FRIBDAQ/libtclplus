@@ -40,6 +40,7 @@
 
 #include <sys/types.h>
 
+#if __cplusplus
 #if __cplusplus > 199711L // i.e. C++98
 // stdint.h is deprecated as of C++11 in favor of <cstdint>
 // The difference is that the types are brought into the std namespace.
@@ -56,7 +57,15 @@ using std::uint32_t;
 using std::int64_t;
 using std::uint64_t;
 #else
+// When compiled with a C++ compiler that is not C++11 compatible
+// cstdint does not exist. Furthermore, stdint.h only includes the 
+// limit macros if __STDC_LIMIT_MACROS variables is defined. 
+#define __STDC_LIMIT_MACROS
 #include <stdint.h>
+#endif /* __cplusplus */
+#else
+// macros are part of the c standard
+# include <stdint.h>
 #endif /* C++ or C */
 
 typedef    int8_t		   INT8;
