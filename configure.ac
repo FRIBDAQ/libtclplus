@@ -5,7 +5,7 @@ AC_CONFIG_SRCDIR([tclplus/TCLInterpreter.cpp])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
-AM_INIT_AUTOMAKE([1.11])
+AM_INIT_AUTOMAKE([1.11 subdir-objects])
 
 
 # Checks for programs.
