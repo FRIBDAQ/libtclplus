@@ -1,5 +1,5 @@
 AC_PREREQ(2.61)
-AC_INIT(libtclplus, 2.0-000, fox@nscl.msu.edu)
+AC_INIT(libtclplus, 2.0-002, fox@nscl.msu.edu)
 
 AC_CONFIG_SRCDIR([tclplus/TCLInterpreter.cpp])
 AC_CONFIG_HEADER([config.h])
