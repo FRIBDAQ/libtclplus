@@ -1,4 +1,4 @@
-libtclplus (10.2-006) unstable; urgency=low
+libtclplus (10.2-6) unstable; urgency=low
 
   * Link tcl++ library to libException .
 
