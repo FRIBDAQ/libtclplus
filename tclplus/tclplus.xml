@@ -820,7 +820,7 @@ public:
 
 <refentry id="manpage.CTCLInterpreterObject">
     <refmeta>
-        <refentrytitle>CTCLInterpreterObject  3 </refentrytitle>
+        <refentrytitle>CTCLInterpreterObject</refentrytitle>
         <manvolnum>3daq</manvolnum>
     </refmeta>
     <refnamediv>
