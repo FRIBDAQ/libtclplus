@@ -139,9 +139,22 @@ g++ -o <replaceable>yourprogram yoursources</replaceable>  \
 <!-- manpage 3daq -->
 
 <refentry id="manpage.CTCLApplication">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLApplication 3</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLApplication</refname>
@@ -241,9 +254,22 @@ CTCLApplication* gpTCLApplication = &amp;app;  // Pointer expected by framework.
 </refentry>
 
 <refentry id="manpage.CTCLException">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLException</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLException</refname>
@@ -438,9 +464,22 @@ Tcl_SetErrorCode(3tcl)
 </refentry>
 
 <refentry id="manpage.CTCLInterpreter">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLInterpreter</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLInterpreter</refname>
@@ -532,11 +571,6 @@ public:
   std::string TildeSubst (const std::string&amp; rName) const;
   Tcl_Interp* operator-&gt; ();
   operator Tcl_Interp* ();
-  
-  void setResult(const char* resultString);
-  void setResult(std::string resultString);
-  void setResult(Tcl_Obj* resultObj);
-  void setResult(CTCLObject&amp; resultObj);
 };
 
 
@@ -753,53 +787,6 @@ public:
             a <classname>CTCLInterpreteter</classname> object and a <type>Tcl_Interp*</type>
             pointer.
         </para>
-        <para>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void</type>
-                <methodname>setResult</methodname>
-                <methodparam>
-                    <type>const char*</type> <parameter> resultString</parameter>
-                </methodparam>
-                
-                <modifier></modifier>
-            </methodsynopsis>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void</type>
-                <methodname>setResult</methodname>
-                <methodparam>
-                    <type>std::string</type> <parameter>resultString</parameter>
-                </methodparam>
-                <modifier></modifier>
-            </methodsynopsis>
-            
-            Provides a method for setting the result of a command from a text
-            string object.  These map to calls to <literal>Tcl_SetResult</literal>
-        </para>
-        <para>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void</type>
-                <methodname>setResult</methodname>
-                <methodparam>
-                    <type>Tcl_Obj*</type> <parameter>resultObj</parameter>
-                </methodparam>
-                <modifier></modifier>
-            </methodsynopsis>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void</type>
-                <methodname>setresult</methodname>
-                <methodparam>
-                    <type>CTCLObject&amp;</type> <parameter>resultObj</parameter>
-                </methodparam>
-                <exceptionname></exceptionname>
-                <modifier></modifier>
-            </methodsynopsis>
-            Sets the result via a Tcl_Obj based entity.  These calls map to
-            <literal>Tcl_SetObjresult</literal>.
-        </para>
     </refsect1>
     <refsect1>
         <title>DEFECTS</title>
@@ -819,9 +806,22 @@ public:
 </refentry>
 
 <refentry id="manpage.CTCLInterpreterObject">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLInterpreterObject  3 </refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLInterpreterObject</refname>
@@ -957,9 +957,22 @@ public:
     </refsect1>
 </refentry>
 <refentry id="manpage.CTCLList">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLList</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLList</refname>
@@ -1128,9 +1141,22 @@ Tcl_Free(3tcl)
     </refsect1>
 </refentry>
 <refentry id="manpage.CTCLObject">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLObject</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLObject</refname>
@@ -1510,9 +1536,22 @@ Tcl_SetStringObj(3tcl)
 
 
 <refentry id="manpage.CTCLObjectProcessor">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLObjectProcessor</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLObjectProcessor</refname>
@@ -1541,12 +1580,6 @@ public:
   virtual int operator()(CTCLInterpreter&amp; interp,
                          std::vector&lt;CTCLObject&gt;&amp; objv) = 0;
   virtual void onUnregister();
-protected:
-  void bindAll(CTCLInterpreter&amp; interp, std::vector&lt;CTCLObject&gt;&amp; objv);
-  void requireAtLeast(std::vector&lt;CTCLObject&gt;&amp; objv, unsigned n, const char* msg=0) const;
-  void requireAtMost(std::vector&lt;CTCLObject&gt;&amp; objv, unsigned n, const char* msg=0) const;
-  void requireExactly(std::vector&lt;CTCLObject&gt;&amp; objv, unsigned n, const char* msg=0) const;
-  
 
 };
 
@@ -1663,94 +1696,6 @@ virtual void onUnregister();
             <function>unregister</function>.  The default behavior is to do nothing, but
             this can be overidden in your derived class if desired.
         </para>
-        <para>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void </type>
-                <methodname>bindAll</methodname>
-                <methodparam>
-                    <type>CTCLInterpreter&amp; </type> <parameter>interp</parameter>
-                </methodparam>
-                <methodparam>
-                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
-                </methodparam>
-                <modifier></modifier>
-            </methodsynopsis>
-            Bind the <parameter>interp</parameter> to all of the objects in <parameter>objv</parameter>.
-            This is normally used by command processors to bind their command words.  This
-            is necessary because there are some operations on
-            <classname>CTCLObject</classname> objects that are only possible if they've
-            been bound to an interpreter.
-        </para>
-        <para>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>  void </type>
-                <methodname>requireAtLeast  </methodname>
-                <methodparam>
-                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
-                </methodparam>
-                <methodparam>
-                    <type>unsigned </type> <parameter>n</parameter>
-                </methodparam>
-                <methodparam>
-                    <type>const char* </type> <parameter>msg </parameter><initializer>0</initializer>
-                </methodparam>
-                <exceptionname>std::string</exceptionname>
-                <modifier>const</modifier>
-            </methodsynopsis>
-            Throws a <classname>std::string</classname> exception if the <parameter>objv</parameter> array
-            has fewer than <parameter>n</parameter> elements.  If
-            <parameter>msg</parameter> is not null it is included in the
-            string that is thrown.
-        </para>
-        <para>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void  </type>
-                <methodname>requireAtMost</methodname>
-                <methodparam>
-                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
-                </methodparam>
-                <methodparam>
-                    <type>unsigned</type> <parameter> n</parameter>
-                </methodparam>
-                <methodparam>
-                    <modifier>const </modifier><type>char* </type>
-                    <parameter>msg</parameter> <initializer>0</initializer>
-                </methodparam>
-                <exceptionname>std::string</exceptionname>
-                <modifier>const</modifier>
-            </methodsynopsis>
-            Same as <methodname>requireAtLeast</methodname> but throws when
-            <parameter>objv</parameter> has more than <parameter>n</parameter>
-            elements.
-        </para>
-        <para>
-            <methodsynopsis>
-                <modifier></modifier>
-                <type>void </type>
-                <methodname>requireExactly</methodname>
-                <methodparam>
-                    <type>std::vector&lt;CTCLObject&gt;&amp; </type> <parameter>objv</parameter>
-                </methodparam>
-                <methodparam>
-                    <type>unsigned </type><parameter>n</parameter>
-                </methodparam>
-                <methodparam>
-                    <modifier>const </modifier><type>char* </type>
-                    <parameter>msg</parameter><initializer>0</initializer>
-                </methodparam>
-                <exceptionname>std::string</exceptionname>
-                <modifier> const</modifier>
-            </methodsynopsis>
-            Same as <methodname>requireAtLeast</methodname> but throws if
-            <parameter>objv</parameter> does not have eactly
-            <parameter>n</parameter> elements.
-        </para>
-  
-  
-
     </refsect1>
     <refsect1>
         <title>SEE ALSO</title>
@@ -1769,9 +1714,22 @@ Tcl_GetCommandInfo(3tcl)
 
 
 <refentry id="manpage.CTCLVariable">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLVariable</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLVariable</refname>
@@ -2031,9 +1989,22 @@ const <type>char</type>* <function>Get</function>(<type>int</type> <parameter>fl
     </refsect1>
 </refentry>
 <refentry id="manpage.CTCLProcessor">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLProcessor</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLProcessor</refname>
@@ -2301,9 +2272,22 @@ return(3tcl)
 
 
 <refentry id="manpage.CTCLChannel">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLChannel</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLChannel</refname>
@@ -2565,9 +2549,22 @@ Tcl_OpenTcpServer(3tcl)
 </refentry>
 
 <refentry id="manpage.CTCLCommandPacakge">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLCommandPackage</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLCommandPackage</refname>
@@ -2744,9 +2741,22 @@ Addison-Wesley Professional Computing Series; 2001 ISBN 0-201-37923-6
 </refentry>
 
 <refentry id="manpage.CTCLCompatibilityProcessor">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLCompatibiltyProcessor</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLCompatibilityProcessor</refname>
@@ -2870,9 +2880,22 @@ See Chapter 4 the Adapter pattern.
 </refentry>
 
 <refentry id="manpage.CTCLFileHandler">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLFileHandler</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLFileHandler</refname>
@@ -3005,9 +3028,22 @@ Tcl_DeleteFileHandler(3tcl)
 
 
 <refentry id="manpage.CTCLHashTable">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLHashTable</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLHashTable</refname>

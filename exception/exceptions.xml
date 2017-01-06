@@ -169,10 +169,22 @@ catch (CException&amp; error) {
 <!-- manpage 3daq -->
 
     <refentry id="manpage.cexception">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
         
         <refmeta>
             <refentrytitle>CException</refentrytitle>
             <manvolnum>3daq</manvolnum>
+            <refmiscinfo class='empty'></refmiscinfo>
         </refmeta>
         
         <refnamediv>
@@ -268,10 +280,22 @@ class         <ooclass><classname>CException</classname></ooclass> {
     </refentry>
 
     <refentry id="manpage.CErrnoException">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
         
         <refmeta>
             <refentrytitle>CErrnoException</refentrytitle>
             <manvolnum>3daq</manvolnum>
+            <refmiscinfo class='empty'></refmiscinfo>
         </refmeta>
         
         <refnamediv>
@@ -350,10 +374,22 @@ class           <ooclass><classname>CErrnoException</classname></ooclass> {
         </refsect1>
     </refentry>
     <refentry id="manpage.CRangeError">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
         
         <refmeta>
             <refentrytitle>CRangeError</refentrytitle>
             <manvolnum>3daq</manvolnum>
+            <refmiscinfo class='empty'></refmiscinfo>
         </refmeta>
         
         <refnamediv>
@@ -493,10 +529,22 @@ class           <ooclass><classname>CRangeError</classname></ooclass> {
         </refsect1>        
     </refentry>
     <refentry id="manpage.CStateException">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
         
         <refmeta>
             <refentrytitle>CStateException</refentrytitle>
             <manvolnum>3daq</manvolnum>
+            <refmiscinfo class='empty'></refmiscinfo>
         </refmeta>
         
         <refnamediv>
@@ -609,10 +657,22 @@ class          <ooclass><classname>CStateException</classname></ooclass> {
         
     </refentry>
     <refentry id="manpage.CStreamIOError">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
         
         <refmeta>
             <refentrytitle>CStreamIOError</refentrytitle>
             <manvolnum>3daq</manvolnum>
+            <refmiscinfo class='empty'></refmiscinfo>
         </refmeta>
         
         <refnamediv>
@@ -795,9 +855,22 @@ catch (CStreamIOError&amp; error) {
         </refsect1>        
     </refentry>
     <refentry id="manpage.curiformatexception">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CURIFormatException</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CURIFormatException</refname>
@@ -1029,9 +1102,22 @@ class      <ooclass><classname>CURIFormatException</classname></ooclass> {
    </refentry>
          
     <refentry id="manpage.cmonitorexception">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CMonitorException</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CMonitorException</refname>
@@ -1226,9 +1312,22 @@ class      <ooclass><classname>CURIFormatException</classname></ooclass> {
       </refsect1>
     </refentry>
     <refentry id="manpage.cinvalidargumentexception">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CInvalidArgumentException</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CInvalidArgumentException</refname>
