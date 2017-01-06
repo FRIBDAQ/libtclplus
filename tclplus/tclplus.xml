@@ -3262,9 +3262,22 @@ Addison-Wesley Professional Computing Series; 2001 ISBN 0-201-37923-6
 
 
 <refentry id="manpage.CTCLHashTableItem">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLHashTableItem</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLHashTableItem</refname>
@@ -3393,9 +3406,22 @@ Prentice Hall Series in Automatic Computation 1976 See section 4.6
 </refentry>
 
 <refentry id="manpage.CTCLHashTableIterator">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLHashTableIterator</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLHashTableIterator</refname>
@@ -3575,9 +3601,22 @@ Addison-Wesley Professional Computing Series; 2001 ISBN 0-201-37923-6
 
 
 <refentry id="manpage.CTCLIdleProcess">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLIdleProcess</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLIdleProcess</refname>
@@ -3689,9 +3728,22 @@ See section 2.4 for a description and discussion of function objects.
 
 
 <refentry id="manpage.CTCLPackagedCommand">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLPackagedCommand</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLPackagedCommand</refname>
@@ -3795,9 +3847,22 @@ CTCLProcessor(3)
 
 
 <refentry id="manpage.CTCLResult">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLResult</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLResult</refname>
@@ -3945,9 +4010,22 @@ CTCLObject(3)
 </refentry>
 
 <refentry id="manpage.CTCLString">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLString</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLString</refname>
@@ -4224,9 +4302,22 @@ Addison-Wesley Professional Computing Series 1994 see section 9.2
 
 
 <refentry id="manpage.CTCLTimer">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
     <refmeta>
         <refentrytitle>CTCLTimer</refentrytitle>
         <manvolnum>3daq</manvolnum>
+        <refmiscinfo class='empty'></refmiscinfo>
     </refmeta>
     <refnamediv>
         <refname>CTCLTimer</refname>
@@ -4412,9 +4503,22 @@ See section 2.4 for a description and discussion of function objects.
 </refentry>
 
     <refentry id="manpage.CTCLLiveEventLoop">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLLiveEventLoop</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLLiveEventLoop</refname>
@@ -4607,9 +4711,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
 
 
     <refentry id="manpage.ctclchannelcommander">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLChannelCommander</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLChannelCommander</refname>
@@ -4936,9 +5053,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
       </refsect1>
    </refentry>
     <refentry id="manpage.CTCLStdioCommander">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLStdioCommander</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLStdioCommander</refname>
@@ -5029,9 +5159,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
 
 
     <refentry id="manpage.CTCLServer">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLServer</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLServer</refname>
@@ -5227,9 +5370,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
    </refentry>
 
     <refentry id="manpage.CTCLTcpServerInstance">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLTcpServerInstance</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLTcpServerInstance</refname>
@@ -5332,9 +5488,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
    </refentry>
 
     <refentry id="manpage.CTCLObjectPackage">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLObjectPackage</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLObjectPackage</refname>
@@ -5445,9 +5614,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
    </refentry>
 
     <refentry id="manpage.CTCLPackagedObjectProcessor">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CTCLPackagedObjectProcessor</refentrytitle>
          <manvolnum>3daq</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CTCLPackagedObjectProcessor</refname>
@@ -5594,9 +5776,22 @@ CTCLApplication* gpTCLApplication = new evttclsh;
    </refentry>
 
     <refentry id="manpage.citemconfiguration">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CItemConfiguration</refentrytitle>
          <manvolnum>3tcl</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CItemConfiguration</refname>
@@ -6547,9 +6742,22 @@ TypeCheckInfo       s_checker;       // Element type checker.
    </refentry>
 
     <refentry id="manpage.cconfigurableobject">
+          <refentryinfo>
+            <author>
+                <personname>
+                    <firstname>Ron</firstname>
+                    <surname>Fox</surname>
+                </personname>
+                <personblurb><para></para></personblurb>
+            </author>
+            <productname>NSCLDAQ</productname>
+            <productnumber></productnumber>
+          </refentryinfo>
+        
       <refmeta>
          <refentrytitle>CConfigurableObject</refentrytitle>
          <manvolnum>3tcl</manvolnum>
+         <refmiscinfo class='empty'></refmiscinfo>
       </refmeta>
       <refnamediv>
          <refname>CConfigurableObject</refname>
@@ -6869,9 +7077,22 @@ TypeCheckInfo       s_checker;       // Element type checker.
 <!-- manpage 1daq -->
 
 <refentry id="manpage.evttclsh">
+      <refentryinfo>
+        <author>
+            <personname>
+                <firstname>Ron</firstname>
+                <surname>Fox</surname>
+            </personname>
+            <personblurb><para></para></personblurb>
+        </author>
+        <productname>NSCLDAQ</productname>
+        <productnumber></productnumber>
+      </refentryinfo>
+    
   <refmeta>
      <refentrytitle>evttclsh</refentrytitle>
      <manvolnum>1tcl</manvolnum>
+     <refmiscinfo class='empty'></refmiscinfo>
   </refmeta>
   <refnamediv>
      <refname>evttclsh</refname>
