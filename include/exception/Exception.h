@@ -30,8 +30,8 @@
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __EXCEPTION_H  //Required for current class
-#define __EXCEPTION_H
+#ifndef EXCEPTION_H  //Required for current class
+#define EXCEPTION_H
 
 #ifndef __STL_STRING
 #include <string>
