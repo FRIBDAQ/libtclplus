@@ -291,39 +291,27 @@ DAMAGES.
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLCOMMANDPACKAGE_H  //Required for current class
-#define __TCLCOMMANDPACKAGE_H
+#ifndef TCLCOMMANDPACKAGE_H  //Required for current class
+#define TCLCOMMANDPACKAGE_H
                                //Required for base classes
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif                               
                                
-#ifndef __TCLINTERPRETER_H
+#ifndef TCLINTERPRETER_H
 #include "TCLInterpreter.h"
 #endif
                                //Required for 1:M associated classes
-#ifndef __TCLPROCESSOR_H
+#ifndef TCLPROCESSOR_H
 #include "TCLProcessor.h"
 #endif                                                               
 
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
 #include <daqdatatypes.h>
 #endif
 
-#ifndef __STL_LIST
 #include <list>
-#ifndef __STL_LIST
-#define __STL_LIST
-#endif
-#endif
-
-
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
 
 typedef std::list<CTCLProcessor*>   CommandList;

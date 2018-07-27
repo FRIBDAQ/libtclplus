@@ -297,21 +297,18 @@ DAMAGES.
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLIDLEPROCESS_H
-#define __TCLIDLEPROCESS_H
+#ifndef TCLIDLEPROCESS_H
+#define TCLIDLEPROCESS_H
 
-#ifndef __TCLTIMER_H // Required for derivation of current class.
+#ifndef TCLTIMER_H // Required for derivation of current class.
 #include "TCLTimer.h"
 #endif
 
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
 #include <daqdatatypes.h>
 #endif
 
-#ifndef _TK_H
 #include <tk.h>
-#define _TK_H
-#endif
 
 class CTCLIntpreter;
 

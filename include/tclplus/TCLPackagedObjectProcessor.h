@@ -13,21 +13,16 @@
 	     Michigan State University
 	     East Lansing, MI 48824-1321
 */
-#ifndef __TCLPACKAGEDOBJECTPROCESSOR_H
-#define __TCLPACKAGEDOBJECTPROCESSOR_H
+#ifndef TCLPACKAGEDOBJECTPROCESSOR_H
+#define TCLPACKAGEDOBJECTPROCESSOR_H
 
 // includes
 
-#ifndef __TCLOBJECTPROCESSOR_H
+#ifndef TCLOBJECTPROCESSOR_H
 #include "TCLObjectProcessor.h"
 #endif
 
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
 // forward definitions:
 

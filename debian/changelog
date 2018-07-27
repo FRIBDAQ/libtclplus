@@ -1,3 +1,9 @@
+libtclplus (11.0.0) unstable; urgency=low
+
+  * Make the headers C++ compliant wrt to include gaurds
+
+ -- Ron Fox <fox@charlie.nscl.msu.edu>  Fri, 27 Jul 2018 09:38:06 -0400
+
 libtclplus (10.2.6) unstable; urgency=low
 
   * Link tcl++ library to libException .

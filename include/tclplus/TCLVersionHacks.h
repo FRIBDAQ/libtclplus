@@ -2,24 +2,11 @@
     This header provides centralizes as many hacks as we can concerning
     TCL API version differences.
 */
-#ifndef __TCLVERSIONHACKS_H
-#define __TCLVERSIONHACKS_H
+#ifndef TCLVERSIONHACKS_H
+#define TCLVERSIONHACKS_H
 
-#ifndef __TCL_H
 #include <tcl.h>
-#ifndef __TCL_H
-#define __TCL_H
-#endif
-#endif
-
-
-#ifndef __CRT_STDLIB_H
 #include <stdlib.h>
-#ifndef __CRT_STDLIB_H
-#define __CRT_STDLIB_H
-#endif
-#endif
-
 
 
 // tclConstCharPtr  - A typedef that's either char* or const char* depending

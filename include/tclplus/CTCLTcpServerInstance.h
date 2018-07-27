@@ -18,16 +18,11 @@
 
 // Headers we absolutely need:
 
-#ifndef __CTCLCHANNELCOMMANDER_H
+#ifndef CTCLCHANNELCOMMANDER_H
 #include <CTCLChannelCommander.h>
 #endif
 
-#ifndef __TCL_H
 #include <tcl.h>
-#ifndef __TCL_H
-#define __TCL_H
-#endif
-#endif
 
 
 // forward classes:

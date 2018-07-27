@@ -1,5 +1,5 @@
-#ifndef __TCLLIVEEVENTLOOP_H
-#define __TCLLIVEEVENTLOOP_H
+#ifndef TCLLIVEEVENTLOOP_H
+#define TCLLIVEEVENTLOOP_H
 /*
     This software is Copyright by the Board of Trustees of Michigan
     State University (c) Copyright 2005.
@@ -17,12 +17,8 @@
 */
 // Includes
 
-#ifndef __STL_STRING
+
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
 
 

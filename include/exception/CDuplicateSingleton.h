@@ -14,17 +14,14 @@
 	     East Lansing, MI 48824-1321
 */
 
-#ifndef __CDUPLICATESINGLETON_H
-#define __CDUPLICATESINGLETON_H
+#ifndef CDUPLICATESINGLETON_H
+#define CDUPLICATESINGLETON_H
 
-#ifndef __EXCEPTION_H
+#ifndef EXCEPTION_H
 #include "Exception.h"
 #endif
 
-
-#ifndef __STL_STRING
 #include <string>
-#endif
 
 class CDuplicateSingleton: public CException
 {

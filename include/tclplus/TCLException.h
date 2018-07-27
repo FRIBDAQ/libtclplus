@@ -290,42 +290,31 @@ DAMAGES.
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __CTCLEXCEPTION_H  //Required for current class
-#define __CTCLEXCEPTION_H
+#ifndef CTCLEXCEPTION_H  //Required for current class
+#define CTCLEXCEPTION_H
         
 
-#ifndef __TCL_H
 #include <tcl.h>
-#ifndef __TCL_H
-#define __TCL_H
-#endif
-#endif
-                       //Required for base classes
-#ifndef __TCLINTERPRETEROBJECT_H
+
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif
 
-#ifndef __TCLINTERPRETER_H
+#ifndef TCLINTERPRETER_H
 #include "TCLInterpreter.h"
 #endif
 
-#ifndef __TCLRESULT_H
+#ifndef TCLRESULT_H
 #include "TCLResult.h"
 #endif
 
                                //Required for base classes
-#ifndef __EXCEPTION_H
+#ifndef EXCEPTION_H
 #include "Exception.h"
 #endif  
                            
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
-
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
 #include <daqdatatypes.h>
 #endif
 

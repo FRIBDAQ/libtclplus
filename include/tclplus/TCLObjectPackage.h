@@ -13,17 +13,12 @@
 	     Michigan State University
 	     East Lansing, MI 48824-1321
 */
-#ifndef __TCLOBJECTPACKAGE_H
-#define __TCLOBJECTPACKAGE_H
+#ifndef TCLOBJECTPACKAGE_H
+#define TCLOBJECTPACKAGE_H
 
 // includes:
 
-#ifndef __STL_LIST
 #include <list>
-#ifndef __STL_LIST
-#define __STL_LIST
-#endif
-#endif
 
 
 // forward defs

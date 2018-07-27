@@ -15,20 +15,15 @@
 */
 
 
-#ifndef __TCLCOMPATIBILITYPROCESSOR_H
-#define __TCLCOMPATIBILITYPROCESSOR_H
+#ifndef TCLCOMPATIBILITYPROCESSOR_H
+#define TCLCOMPATIBILITYPROCESSOR_H
 
-#ifndef __TCLOBJECTPROCESSOR_H
+#ifndef TCLOBJECTPROCESSOR_H
 #include <TCLObjectProcessor.h>
 #endif
 
 
-#ifndef __STL_VECTOR
 #include <vector>
-#ifndef __STL_VECTOR
-#define __STL_VECTOR
-#endif
-#endif
 
 // Forward class definitions:
 

@@ -9,19 +9,14 @@
 
 */
 
-#ifndef __CTCLTRACEDVARIABLE_H
-#define __CTCLTRACEDVARIABLE_H
+#ifndef CTCLTRACEDVARIABLE_H
+#define CTCLTRACEDVARIABLE_H
 
-#ifndef __CTCLVARIABLE_H
+#ifndef CTCLVARIABLE_H
 #include <TCLVariable.h>
 #endif
 
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
 // Forward definitions:
 

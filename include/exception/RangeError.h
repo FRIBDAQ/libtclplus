@@ -34,16 +34,14 @@
 */
 
 
-#ifndef __CRANGEERROR_H  //Required for current class
-#define __CRANGEERROR_H
+#ifndef CRANGEERROR_H  //Required for current class
+#define CRANGEERROR_H
                                //Required for base classes
-#ifndef __CEXCEPTION_H
+#ifndef EXCEPTION_H
 #include "Exception.h"
 #endif                             
-#ifndef __STL_STRING
+
 #include <string>
-#define __STL_STRING
-#endif  
                                
 class CRangeError  : public CException        
 {
