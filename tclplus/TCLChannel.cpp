@@ -50,7 +50,7 @@ using namespace std;
 CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp, 
 	      string      Filename,
 	      const char*      pMode,
-	      int              permissions) throw (string):
+	      int              permissions) :
   CTCLInterpreterObject(pInterp),
   m_fCloseOnDestroy(true),
   m_fRegistered(false)
@@ -101,7 +101,7 @@ CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp,
 CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp,
 	      int              argc,
 	      const char**           pargv,
-	      int              flags)  throw (string)	  :
+	      int              flags)  :
   CTCLInterpreterObject(pInterp),
   m_fCloseOnDestroy(true),
   m_fRegistered(false)
@@ -141,7 +141,7 @@ CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp,
 */
 CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp,
 			 int              port,
-			 string      host)  throw (string) :
+			 string      host)   :
   CTCLInterpreterObject(pInterp),
   m_fCloseOnDestroy(true),
   m_fRegistered(false)
@@ -195,7 +195,7 @@ CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp,
 CTCLChannel::CTCLChannel(CTCLInterpreter* pInterp,
 	      int              port,
 	      Tcl_TcpAcceptProc* proc,
-			 ClientData       AppData)   throw(std::string) :
+			 ClientData       AppData)   :
   CTCLInterpreterObject(pInterp),
   m_fCloseOnDestroy(true),
   m_fRegistered(false)
