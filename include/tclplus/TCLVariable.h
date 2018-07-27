@@ -30,28 +30,22 @@
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLVARIABLE_H  //Required for current class
-#define __TCLVARIABLE_H
+#ifndef TCLVARIABLE_H  //Required for current class
+#define TCLVARIABLE_H
 
-#ifndef __TCLVERSIONHACKS_H
+#ifndef TCLVERSIONHACKS_H
 #include "TCLVersionHacks.h"
 #endif 
                               //Required for base classes
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif                               
 
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
 #include <daqdatatypes.h>
 #endif
 
-
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
                                
 class CTCLVariable  : public CTCLInterpreterObject        
 {

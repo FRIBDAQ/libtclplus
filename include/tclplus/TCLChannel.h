@@ -278,28 +278,18 @@ DAMAGES.
 
 		     END OF TERMS AND CONDITIONS '
 */
-#ifndef __TCL_CHANNEL_H
-#define __TCL_CHANNEL_H
+#ifndef TCL_CHANNEL_H
+#define TCL_CHANNEL_H
 
 // Headers:
 
-#ifndef __TCL_H
 #include <tcl.h>
-#ifndef __TCL_H
-#define __TCL_H
-#endif
-#endif
 
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include <TCLInterpreterObject.h>
 #endif
 
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif 
-#endif
 
 /*!
    This class defines a class that encapsulates a TCL Channel.

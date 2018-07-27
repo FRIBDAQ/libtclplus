@@ -36,7 +36,9 @@
 **--
 **/
 
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
+#define DAQTYPES_H
+
 
 #include <sys/types.h>
 
@@ -47,6 +49,7 @@
 // We can mimic the old behavior by including cstdint and then bringing
 // them into the global scope with the using operator. This is a kludge 
 // but is the best solution for the moment.
+
 #include <cstdint>
 using std::int8_t;
 using std::uint8_t;

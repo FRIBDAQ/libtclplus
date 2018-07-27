@@ -290,38 +290,25 @@ DAMAGES.
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLHASHTABLE_H  //Required for current class
-#define __TCLHASHTABLE_H
+#ifndef TCLHASHTABLE_H  //Required for current class
+#define TCLHASHTABLE_H
 
-#ifndef __TCLHASHTABLEITEM_H
+#ifndef TCLHASHTABLEITEM_H
 #include "TCLHashTableItem.h"
 #endif
 
-#ifndef __TCLHASHTABLEITERATOR_H
+#ifndef TCLHASHTABLEITERATOR_H
 #include "TCLHashTableIterator.h"
 #endif
 
 
-#ifndef __HISTOTYPES_H
+#ifndef HISTOTYPES_H
 #include <histotypes.h>
 #endif
           
-#ifndef __TCL_TCL_H                     
 #include <tcl.h>
-#define __TCL_TCL_H
-#endif
-
-#ifndef __CRT_ASSERT_H
 #include <assert.h>
-#define __CRT_ASSERT_H
-#endif
-
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
 template <class T>
 class CTCLHashTable      

@@ -29,10 +29,10 @@
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLAPPLICATION_H  //Required for current class
-#define __TCLAPPLICATION_H
+#ifndef TCLAPPLICATION_H  //Required for current class
+#define TCLAPPLICATION_H
                                //Required for base classes
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif                               
 

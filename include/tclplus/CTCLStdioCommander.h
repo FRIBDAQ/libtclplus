@@ -17,23 +17,12 @@
 	     East Lansing, MI 48824-1321
 */
 
-#ifndef __CTCLCHANNELCOMMANDER_H
+#ifndef CTCLCHANNELCOMMANDER_H
 #include <CTCLChannelCommander.h>
 #endif
 
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
-
-#ifndef __TCL_H
 #include <tcl.h>
-#ifndef __TCL_H
-#define __TCL_H
-#endif
-#endif
 
 // forward class defs:
 

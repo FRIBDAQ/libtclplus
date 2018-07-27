@@ -320,18 +320,15 @@ DAMAGES.
  * Fix type on Tcl_Hashtable -> Tcl_HashTable
  *
  */
-#ifndef __TCLHASHTABLEITERATOR_H  //Required for current class
-#define __TCLHASHTABLEITERATOR_H
+#ifndef TCLHASHTABLEITERATOR_H  //Required for current class
+#define TCLHASHTABLEITERATOR_H
 
-#ifndef __TCLHASHTABLEITEM_H
+#ifndef TCLHASHTABLEITEM_H
 #include "TCLHashTableItem.h"
 #endif
 
                                //Required for 1:1 associated classes
-#ifndef __TCL_TCL_H
 #include <tcl.h>
-#define __TCL_TCL_H
-#endif
 
 template <class T>
 class CTCLHashTableIterator

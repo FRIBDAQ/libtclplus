@@ -9,21 +9,16 @@
 
 */
 
-#ifndef __CLANGUAGETRACECALLBACKS_H
-#define __CLANGUAGETRACECALLBACKS_H
+#ifndef CLANGUAGETRACECALLBACKS_H
+#define CLANGUAGETRACECALLBACKS_H
 
 
-#ifndef __VARIABLETRACECALLBACKS_H
+#ifndef VARIABLETRACECALLBACKS_H
 #include "VariableTraceCallback.h"
 #endif
 
 
-#ifndef __TCL_H
 #include <tcl.h>
-#ifndef __TCL_H
-#define __TCL_H
-#endif
-#endif
 
 class CTCLInterpreter;
 

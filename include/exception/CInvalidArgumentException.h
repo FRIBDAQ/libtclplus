@@ -14,10 +14,10 @@
              East Lansing, MI 48824-1321
 */
 
-#ifndef __CINVALIDARGUMENTEXCEPTION_H
-#define __CINVALIDARGUMENTEXCEPTION_H
+#ifndef CINVALIDARGUMENTEXCEPTION_H
+#define CINVALIDARGUMENTEXCEPTION_H
 
-#ifndef __EXCEPTION_H
+#ifndef EXCEPTION_H
 #include <Exception.h>
 #endif
 

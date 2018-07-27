@@ -30,43 +30,21 @@
 // (c) Copyright NSCL 1999, All rights reserved TCLObject.h
 //
 
-#ifndef __TCLOBJECT_H  //Required for current class
-#define __TCLOBJECT_H
+#ifndef TCLOBJECT_H  //Required for current class
+#define TCLOBJECT_H
 
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif
 
-#ifndef __TCLLIST_H
+#ifndef TCLLIST_H
 #include "TCLList.h"
 #endif
 
-#ifndef __TCL_TCL_H
 #include <tcl.h>
-#ifndef __TCL_TCL_H
-#define __TCL_TCL_H
-#endif
-#endif
-
-#ifndef __CRT_ASSERT_H
 #include <assert.h>
-#define __CRT_ASSERT_H
-#endif
-
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
-
-
-#ifndef __STL_VECTOR
 #include <vector>
-#ifndef __STL_VECTOR
-#define __STL_VECTOR
-#endif
-#endif
 
 
 class CTCLObject : public CTCLInterpreterObject

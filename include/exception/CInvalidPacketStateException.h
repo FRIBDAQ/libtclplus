@@ -17,23 +17,16 @@
 
 //////////////////////////CInvalidPacketStateException.h file//////////////////////////////////
 
-#ifndef __CINVALIDPACKETSTATEEXCEPTION_H  
-#define __CINVALIDPACKETSTATEEXCEPTION_H
+#ifndef CINVALIDPACKETSTATEEXCEPTION_H  
+#define CINVALIDPACKETSTATEEXCEPTION_H
 
 
                                
-#ifndef __CREADOUTEXCEPTION_H
+#ifndef READOUTEXCEPTION_H
 #include "CReadoutException.h"
 #endif
 
-
-
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
                                
 /*!
    Encapsulates exceptions which are thrown as a result of 

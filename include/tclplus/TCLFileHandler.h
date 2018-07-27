@@ -290,26 +290,19 @@ DAMAGES.
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLFILEHANDLER_H	//Required for current class
-#define __TCLFILEHANDLER_H
+#ifndef TCLFILEHANDLER_H	//Required for current class
+#define TCLFILEHANDLER_H
 				//Required for base classes
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif                            
 
-#ifndef __HISTOTYPES_H
+#ifndef HISTOTYPES_H
 #include <daqdatatypes.h>
 #endif
 
-#ifndef __CRT_UNISTD_H
 #include <unistd.h>
-#define __CRT_UNISTD_H
-#endif
-
-#ifndef __CRT_STDIO_H
 #include <stdio.h>
-#define __CRT_STDIO_H
-#endif
   
 
 class CTCLFileHandler  : public CTCLInterpreterObject        

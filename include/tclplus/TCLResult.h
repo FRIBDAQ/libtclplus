@@ -29,23 +29,18 @@
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLRESULT_H  //Required for current class
-#define __TCLRESULT_H
+#ifndef TCLRESULT_H  //Required for current class
+#define TCLRESULT_H
                                //Required for base classes
-#ifndef __TCLOBJECT_H
+#ifndef TCLOBJECT_H
 #include "TCLObject.h"
 #endif
 
-#ifndef __TCLSTRING_H
+#ifndef TCLSTRING_H
 #include "TCLString.h"
 #endif
 
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
 
 /*!

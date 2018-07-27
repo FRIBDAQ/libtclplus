@@ -33,10 +33,8 @@
 #ifndef EXCEPTION_H  //Required for current class
 #define EXCEPTION_H
 
-#ifndef __STL_STRING
+
 #include <string>
-#define __STL_STRING
-#endif
 
 #define kACTIONSIZE 1024 // Size of action message.
                                

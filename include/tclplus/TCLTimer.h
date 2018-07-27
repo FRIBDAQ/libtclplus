@@ -29,22 +29,20 @@
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __TCLTIMER_H  //Required for current class
-#define __TCLTIMER_H
+#ifndef TCLTIMER_H  //Required for current class
+#define TCLTIMER_H
                                //Required for base classes
-#ifndef __TCLINTERPRETEROBJECT_H
+#ifndef TCLINTERPRETEROBJECT_H
 #include "TCLInterpreterObject.h"
 #endif    
 
-#ifndef __TCL_TCL_H
-#include <tcl.h>
-#define __TCL_TCL_H 
-#endif
-        
-
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
 #include <daqdatatypes.h>
 #endif
+
+
+#include <tcl.h>
+
                   
                                
 class CTCLTimer  : public CTCLInterpreterObject        

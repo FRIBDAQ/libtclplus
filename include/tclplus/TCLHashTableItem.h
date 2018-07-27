@@ -294,8 +294,8 @@ DAMAGES.
 //
 /////////////////////////////////////////////////////////////
 
-#ifndef __CTCLHASHTABLEITEM_H  //Required for current class
-#define __CTCLHASHTABLEITEM_H
+#ifndef CTCLHASHTABLEITEM_H  //Required for current class
+#define CTCLHASHTABLEITEM_H
 
 template <class T>		// T Must have copy ctor & Assignment defined.
 class CTCLHashTableItem

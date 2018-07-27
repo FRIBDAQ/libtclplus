@@ -37,18 +37,15 @@
 // (c) Copyright NSCL 1999, All rights reserved StreamIOError.h
 //
 
-#ifndef __STREAMIOERROR_H  //Required for current class
-#define __STREAMIOERROR_H
+#ifndef STREAMIOERROR_H  //Required for current class
+#define STREAMIOERROR_H
 
                                //Required for base classes
-#ifndef __EXCEPTION_H
+#ifndef EXCEPTION_H
 #include "Exception.h"
 #endif
 
-#ifndef __STL_STRING
 #include <string>
-#define __STL_STRING
-#endif                
      
 
 class CStreamIOError  : public CException        

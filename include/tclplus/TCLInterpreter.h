@@ -37,38 +37,21 @@
 
 
 
-#ifndef __TCLInterpreter_H  //Reuired for current class
-#define __TCLInterpreter_H
+#ifndef TCLInterpreter_H  //Reuired for current class
+#define TCLInterpreter_H
 
-#ifndef __TCL_H
-#include <tcl.h>
-#define __TCL_H
-#endif          
-
-
-
-
-#ifndef __STL_STRING
-#include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
-
-#ifndef __STL_VECTOR
-#include <vector>
-#ifndef __STL_VECTOR
-#define __STL_VECTOR
-#endif
-#endif
-
-#ifndef __TCLSTRING_H
+#ifndef TCLSTRING_H
 #include "TCLString.h"
 #endif
 
-#ifndef __DAQTYPES_H
+#ifndef DAQTYPES_H
 #include <daqdatatypes.h>
 #endif
+
+
+#include <tcl.h>
+#include <string>
+#include <vector>
 
 class CTCLObject;
 

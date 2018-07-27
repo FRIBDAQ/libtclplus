@@ -14,17 +14,12 @@
 	     East Lansing, MI 48824-1321
 */
 
-#ifndef __CCONFIGURABLEOBJECT_H
-#define __CCONFIGURABLEOBJECT_H
+#ifndef CCONFIGURABLEOBJECT_H
+#define CCONFIGURABLEOBJECT_H
 
-#ifndef __STL_STRING
 #include <string>
-#ifndef __STL_STRING
-#define __STL_STRING
-#endif
-#endif
 
-#ifndef __CITEMCONFIGURATION_H
+#ifndef CITEMCONFIGURATION_H
 #include "CItemConfiguration.h"
 #endif
 
