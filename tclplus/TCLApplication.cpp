@@ -166,3 +166,5 @@ CTCLApplication::getThread() const
 {
   return m_thread;
 }
+
+__attribute__((weak)) CTCLApplication* gpTCLApplication(0);
