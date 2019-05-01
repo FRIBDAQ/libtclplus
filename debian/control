@@ -1,7 +1,7 @@
 Source: libtclplus
 Priority: extra
-Maintainer: Ryan Blair <blair@nscl.msu.edu>
-Build-Depends: debhelper (>= 8.0.0), autotools-dev, tcl8.5-dev, tk8.5-dev, libcppunit-dev, libcppunit-1.12-1 | libcppunit-1.13-0
+Maintainer: Ron Fox <fox@nscl.msu.edu>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, tcl8.5-dev | tcl8.6-dev, tk8.5-dev | tk8.6-dev, libcppunit-dev, libcppunit-1.12-1 | libcppunit-1.13-0 | libcppunit-1.14-0
 Standards-Version: 3.9.3
 Section: libs
 Homepage: http://sourceforge.net/projects/nscldaq
