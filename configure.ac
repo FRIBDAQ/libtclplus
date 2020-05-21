@@ -22,6 +22,10 @@ AC_SUBST([LIBTOOL_DEPS])
 SOVERSION="2:0:0"
 AC_SUBST(SOVERSION)
 
+# We want this to be compiled with the C++-11 standard:
+
+AX_CXX_COMPILE_STDCXX_11([noext])
+
 # specfic checks
 AC_HEADER_STDC
 
