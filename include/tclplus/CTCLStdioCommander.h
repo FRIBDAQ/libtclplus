@@ -1,5 +1,5 @@
-#ifndef __CTCLSTDIOCOMMANDER_H
-#define __CTCLSTDIOCOMMANDER_H
+#ifndef CTCLSTDIOCOMMANDER_H
+#define CTCLSTDIOCOMMANDER_H
 
 /*
     This software is Copyright by the Board of Trustees of Michigan
@@ -17,10 +17,7 @@
 	     East Lansing, MI 48824-1321
 */
 
-#ifndef CTCLCHANNELCOMMANDER_H
 #include <CTCLChannelCommander.h>
-#endif
-
 #include <string>
 #include <tcl.h>
 

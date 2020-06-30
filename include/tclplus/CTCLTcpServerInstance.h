@@ -1,5 +1,5 @@
-#ifndef __CTCLTCPSERVERINSTANCE_H
-#define __CTCLTCPSERVERINSTANCE_H
+#ifndef CTCLTCPSERVERINSTANCE_H
+#define CTCLTCPSERVERINSTANCE_H
 /*
     This software is Copyright by the Board of Trustees of Michigan
     State University (c) Copyright 2005.
@@ -18,10 +18,7 @@
 
 // Headers we absolutely need:
 
-#ifndef CTCLCHANNELCOMMANDER_H
 #include <CTCLChannelCommander.h>
-#endif
-
 #include <tcl.h>
 
 

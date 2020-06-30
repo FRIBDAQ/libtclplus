@@ -1,5 +1,5 @@
-#ifndef __CTCLCHANNELCOMMANDER_H
-#define __CTCLCHANNLECOMMANDER_H
+#ifndef CTCLCHANNELCOMMANDER_H
+#define CTCLCHANNLECOMMANDER_H
 /*
     This software is Copyright by the Board of Trustees of Michigan
     State University (c) Copyright 2005.
