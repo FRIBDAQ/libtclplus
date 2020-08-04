@@ -179,7 +179,8 @@ CTCLServer::allowConnection(Tcl_Channel connection,
 			    string      hostname)
 {
   if (  (hostname == string("localhost"))   ||
-	(hostname == string("127.0.0.1"))) {
+	(hostname == string("127.0.0.1"))   ||
+	(hostname == string("::1"))) {
     return true;
   }
   else {
