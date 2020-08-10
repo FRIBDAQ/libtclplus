@@ -103,7 +103,7 @@ public:
 protected:
   CTCLInterpreter* AssertIfNotBound() {
     CTCLInterpreter* pInterp = getInterpreter();
-    assert(pInterp != kpNULL);
+    assert(pInterp != TCLPLUS::kpNULL);
     return pInterp;
   }
 

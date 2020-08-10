@@ -137,7 +137,7 @@ extern "C" {
 
 
     gpTCLInterpreter = new CTCLInterpreter(interp); 
-    assert(gpTCLInterpreter != (CTCLInterpreter*)kpNULL);
+    assert(gpTCLInterpreter != (CTCLInterpreter*)TCLPLUS::kpNULL);
 
     gpTCLApplication->Bind(*gpTCLInterpreter);
 
