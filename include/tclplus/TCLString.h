@@ -17,7 +17,7 @@
 #define TCLSTRING_H
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 

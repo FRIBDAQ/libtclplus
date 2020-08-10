@@ -42,7 +42,7 @@
 #endif                               
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 #include <string>

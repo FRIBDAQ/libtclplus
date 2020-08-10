@@ -34,7 +34,7 @@
 #define TCLINTERPRETEROBJECT_H
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 
