@@ -54,7 +54,7 @@ using namespace std;
 //     mutator
 //
 CTCLString& 
-CTCLString::Append(const char* pString, Int_t nLength) 
+CTCLString::Append(const char* pString, TCLPLUS::Int_t nLength) 
 {
 // Appends the first nLength characters of contents of the
 // rString parameter to the TCL Dstring object
@@ -117,7 +117,7 @@ CTCLString::AppendElement(const char* pRhs)
    \retval Reference to *this.
 */
 CTCLString&
-CTCLString::AppendElement(DFloat_t value, const char* pFormat)
+CTCLString::AppendElement(TCLPLUS::DFloat_t value, const char* pFormat)
 {
   char buffer[100];
   sprintf(buffer, pFormat, value);
@@ -190,7 +190,7 @@ CTCLString::EndSublist()
 //  Operation Type:
 //     selector.
 //
-UInt_t
+TCLPLUS::UInt_t
 CTCLString::Length() const 
 {
 // Returns the number of characters in the string.
@@ -206,7 +206,7 @@ CTCLString::Length() const
 //     mutator
 //
 CTCLString& 
-CTCLString::Truncate(UInt_t nNewLength) 
+CTCLString::Truncate(TCLPLUS::UInt_t nNewLength) 
 {
 // Shortens the string to the designated number
 // of characters.
@@ -229,13 +229,13 @@ CTCLString::Truncate(UInt_t nNewLength)
 //  Operation Type:
 //     Parser
 //
-Bool_t 
+TCLPLUS::Bool_t 
 CTCLString::isCommand() const 
 {
 // Determines if the string constitutes a complete command
 
-  Int_t i =  (Tcl_CommandComplete(Tcl_DStringValue(&m_String)));
-  return ((i == 1) ? kfTRUE : kfFALSE);
+  TCLPLUS::Int_t i =  (Tcl_CommandComplete(Tcl_DStringValue(&m_String)));
+  return ((i == 1) ? TCLPLUS::kfTRUE : TCLPLUS::kfFALSE);
 }
 //////////////////////////////////////////////////////////////////////////
 //
@@ -244,7 +244,7 @@ CTCLString::isCommand() const
 //  Operation Type:
 //     Parser
 //
-Bool_t 
+TCLPLUS::Bool_t 
 CTCLString::Match(const char* pPattern) const 
 {
 // Returns kfTRUE if the string matches
@@ -264,9 +264,9 @@ CTCLString::Match(const char* pPattern) const
 //       kfFALSE - if didn't match.
 // Exceptions:  
 
- Int_t i = Tcl_StringMatch(Tcl_DStringValue(&m_String),
+ TCLPLUS::Int_t i = Tcl_StringMatch(Tcl_DStringValue(&m_String),
 			   (char*)pPattern);
- return ((i == 1) ? kfTRUE : kfFALSE);
+ return ((i == 1) ? TCLPLUS::kfTRUE : TCLPLUS::kfFALSE);
 
 }
 

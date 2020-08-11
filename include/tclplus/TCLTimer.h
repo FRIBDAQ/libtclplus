@@ -48,8 +48,8 @@
 class CTCLTimer  : public CTCLInterpreterObject        
 {
   Tcl_TimerToken m_tToken;  // Timer token returned from Tcl_CreateTimerHandler.
-  UInt_t m_nMsec;		// No. Milleseconds delay on timer.
-  Bool_t m_fSet;		// kfTRUE if timer is  pending (m_tToken valid).
+  TCLPLUS::UInt_t m_nMsec;		// No. Milleseconds delay on timer.
+  TCLPLUS::Bool_t m_fSet;		// kfTRUE if timer is  pending (m_tToken valid).
   
 public:
 			//Default constructor
@@ -60,7 +60,7 @@ public:
     m_nMsec(0),  
     m_fSet(0)   
   { } 
-  CTCLTimer(CTCLInterpreter* pInterp, UInt_t nMsec = 0) :
+  CTCLTimer(CTCLInterpreter* pInterp, TCLPLUS::UInt_t nMsec = 0) :
     CTCLInterpreterObject(pInterp),
     m_tToken(0),
     m_nMsec(nMsec),
@@ -90,11 +90,11 @@ public:
   {
     return m_tToken;
   }
-  UInt_t getMsec() const
+  TCLPLUS::UInt_t getMsec() const
   {
     return m_nMsec;
   }
-  Bool_t IsSet() const
+  TCLPLUS::Bool_t IsSet() const
   {
     return m_fSet;
   }
@@ -106,11 +106,11 @@ protected:
   { 
     m_tToken = am_tToken;
   }
-  void setMsec (UInt_t am_nMsec)
+  void setMsec (TCLPLUS::UInt_t am_nMsec)
   { 
     m_nMsec = am_nMsec;
   }
-  void setSet (Bool_t am_fSet)
+  void setSet (TCLPLUS::Bool_t am_fSet)
   { 
     m_fSet = am_fSet;
   }
@@ -120,7 +120,7 @@ public:
   virtual   void operator() ()   = 0;
   static  void CallbackRelay (ClientData pObject)  ;
   void Set ()  ;
-  void Set(UInt_t nms) {
+  void Set(TCLPLUS::UInt_t nms) {
     m_nMsec = nms;
     Set();
   }

@@ -127,7 +127,7 @@ CTCLException::ReasonText() const
 //  Operation Type:
 //     Selector
 //
-Int_t 
+TCLPLUS::Int_t 
 CTCLException::ReasonCode() const 
 {
 // Returns the reason for the exception

@@ -31,13 +31,13 @@
 
 class CTCLFileHandler  : public CTCLInterpreterObject        
 {
-  UInt_t m_nFid;  // File descriptor associated with the object.
+  TCLPLUS::UInt_t m_nFid;  // File descriptor associated with the object.
   
 public:
 			//Default constructor
 
   CTCLFileHandler (CTCLInterpreterObject* pInterp,  
-		   UInt_t am_nFid = STDIN_FILENO) :       
+		   TCLPLUS::UInt_t am_nFid = STDIN_FILENO) :       
     CTCLInterpreterObject(pInterp->getInterpreter()),
     m_nFid (am_nFid)  
   { }        
@@ -47,7 +47,7 @@ public:
     m_nFid(fileno(pFile))
   { }
   CTCLFileHandler(CTCLInterpreter* pInterp,
-		   UInt_t am_nFid = STDIN_FILENO) :       
+		   TCLPLUS::UInt_t am_nFid = STDIN_FILENO) :       
     CTCLInterpreterObject(pInterp),
     m_nFid(am_nFid)
   { }
@@ -87,14 +87,14 @@ public:
   // Readonly selectors:        
 
 public:
-  UInt_t getFid() const
+  TCLPLUS::UInt_t getFid() const
   {
     return m_nFid;
   }
   // Mutators:
 
 public:                       
-  void setFid (UInt_t am_nFid)
+  void setFid (TCLPLUS::UInt_t am_nFid)
   { 
     m_nFid = am_nFid;
   }

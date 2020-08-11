@@ -64,7 +64,7 @@
                                
 class CTCLException  : public CTCLInterpreterObject ,public CException
 {
-   Int_t m_nReason;  // Reason the exception was thrown
+   TCLPLUS::Int_t m_nReason;  // Reason the exception was thrown
 				// TCL_ERROR    - Error in script.
 				// TCL_BREAK    - Break from loop.
 				// TCL_CONTINUE - continue loop.
@@ -76,7 +76,7 @@ public:
 			//Default constructor
 
   CTCLException (CTCLInterpreter& am_rInterpreter,  
-		 Int_t am_nReason,
+		 TCLPLUS::Int_t am_nReason,
 		 const char* pString) :
     CTCLInterpreterObject(&am_rInterpreter), 
     CException(pString),
@@ -85,7 +85,7 @@ public:
     m_ResultText = std::string(Tcl_GetStringResult(am_rInterpreter.getInterpreter()));
   }
   CTCLException(CTCLInterpreter& am_rInterpreter,
-		Int_t am_nReason,
+		TCLPLUS::Int_t am_nReason,
 		const std::string& rString) : 
     CTCLInterpreterObject(&am_rInterpreter),
     CException(rString),
@@ -134,7 +134,7 @@ public:
   //
 public:
 
-  Int_t getReason() const
+  TCLPLUS::Int_t getReason() const
   {
     return m_nReason;
   }
@@ -150,7 +150,7 @@ protected:
   { 
     Bind(am_rInterpreter);
   }
-  void setReason (Int_t am_nReason)
+  void setReason (TCLPLUS::Int_t am_nReason)
   { 
     m_nReason = am_nReason;
   }
@@ -181,7 +181,7 @@ public:
   // CException generic interface:
   //
   virtual   const char* ReasonText () const;
-  virtual   Int_t ReasonCode () const  ;
+  virtual   TCLPLUS::Int_t ReasonCode () const  ;
 private:
   CTCLResult GetResult ();
   

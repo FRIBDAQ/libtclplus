@@ -315,7 +315,7 @@ CTCLVariable::Trace(int flags, char* pIndex)
 			     (char*)(m_sVariable.c_str()), pIndex,
 			     flags, TraceRelay, (ClientData)this);
   if(status == TCL_OK) {
-    m_fTracing = kfTRUE;
+    m_fTracing = TCLPLUS::kfTRUE;
     m_nTraceFlags = flags;
     m_sTraceIndex = pIndex ? pIndex : "";
   }
@@ -342,7 +342,7 @@ CTCLVariable::UnTrace()
     Tcl_UntraceVar2(pInterp->getInterpreter(),
 		    (char*)(m_sVariable.c_str()), 
 		    (char*)(m_sTraceIndex.size() ? m_sTraceIndex.c_str() : 
-                                           (char*)kpNULL),
+                                           (char*)TCLPLUS::kpNULL),
 		    m_nTraceFlags, TraceRelay, (ClientData)this);
   }
 
@@ -369,7 +369,7 @@ CTCLVariable::DoAssign(const CTCLVariable& rRhs)
   if(m_fTracing) {
     Trace(m_nTraceFlags, (char*)(m_sTraceIndex.size() ? 
 				      m_sTraceIndex.c_str() : 
-				      (const char*)kpNULL));
+				      (const char*)TCLPLUS::kpNULL));
   }
 
 }

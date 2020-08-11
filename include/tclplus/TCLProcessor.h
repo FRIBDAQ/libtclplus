@@ -98,8 +98,8 @@ public:
     return ParseDouble(rString.c_str(), pDouble);
   }
 
-  int ParseBoolean (const char* pString, Bool_t* pBoolean)  ;
-  int ParseBoolean (const std::string& rString, Bool_t* pBoolean) {
+  int ParseBoolean (const char* pString, TCLPLUS::Bool_t* pBoolean)  ;
+  int ParseBoolean (const std::string& rString, TCLPLUS::Bool_t* pBoolean) {
     return ParseBoolean(rString.c_str(), pBoolean);
   }
 
