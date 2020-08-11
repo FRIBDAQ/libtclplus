@@ -130,10 +130,10 @@ void interpretertest::expressions()
 
   // Bool results.
 
-  EQMSG("bool(const char*)", kfTRUE, m_pInterp->ExprBoolean("on"));
-  EQMSG("bool(string)",     kfFALSE, m_pInterp->ExprBoolean(string("7 > 15")));
+  EQMSG("bool(const char*)", TCLPLUS::kfTRUE, m_pInterp->ExprBoolean("on"));
+  EQMSG("bool(string)",     TCLPLUS::kfFALSE, m_pInterp->ExprBoolean(string("7 > 15")));
   expression = "off";
-  EQMSG("bool(CTCLString)", kfFALSE, m_pInterp->ExprBoolean(expression));
+  EQMSG("bool(CTCLString)", TCLPLUS::kfFALSE, m_pInterp->ExprBoolean(expression));
 
 }
 
