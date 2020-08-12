@@ -50,7 +50,7 @@
 #endif                                                               
 
 #ifndef DAQTYPES_H
-#include <tclplusdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 #include <list>
