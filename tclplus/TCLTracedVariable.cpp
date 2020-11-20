@@ -39,7 +39,7 @@ CTCLTracedVariable::CTCLTracedVariable(CTCLInterpreter*        pInterp,
 				 string                  Name,
 				 CVariableTraceCallback& traceback,
 				 int                     flags) :
-  CTCLVariable(pInterp, Name, kfFALSE),
+  CTCLVariable(pInterp, Name, TCLPLUS::kfFALSE),
   m_pCallback(&traceback)
 {
   Trace(flags, NULL);

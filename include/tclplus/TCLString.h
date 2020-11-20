@@ -17,7 +17,7 @@
 #define TCLSTRING_H
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 
@@ -118,16 +118,16 @@ public:
 public:
   // Append subchunk of strings:
   //
-  CTCLString& Append (const std::string& rString, Int_t nLength=-1) {
+  CTCLString& Append (const std::string& rString, TCLPLUS::Int_t nLength=-1) {
     return Append(rString.c_str(), nLength);
   }
-  CTCLString& Append (const CTCLString&  rString, Int_t nLength=-1) {
+  CTCLString& Append (const CTCLString&  rString, TCLPLUS::Int_t nLength=-1) {
     return Append(Tcl_DStringValue(&rString.m_String), nLength);
   }
-  CTCLString& Append (Tcl_DString&       pString, Int_t nLength=-1) {
+  CTCLString& Append (Tcl_DString&       pString, TCLPLUS::Int_t nLength=-1) {
     return Append(Tcl_DStringValue(&pString), nLength);
   }
-  CTCLString& Append (const char*        pString, Int_t nLength=-1);
+  CTCLString& Append (const char*        pString, TCLPLUS::Int_t nLength=-1);
   //
   // Append a list element to a string:
   //
@@ -141,24 +141,24 @@ public:
     return AppendElement(rRhs.c_str());
   }
   CTCLString& AppendElement (const char*             pRhs);
-  CTCLString& AppendElement(DFloat_t value, const char* pFormat = "%f");
+  CTCLString& AppendElement(TCLPLUS::DFloat_t value, const char* pFormat = "%f");
   CTCLString& AppendElement(long value, const char* pFormat = "%i");
   //
   // List/sublist bracketing calls:
   //
   CTCLString& StartSublist ()  ;
   CTCLString& EndSublist ()  ;
-  UInt_t  Length () const ;
-  CTCLString& Truncate (UInt_t nNewLength)  ;
-  Bool_t isCommand () const  ;
+  TCLPLUS::UInt_t  Length () const ;
+  CTCLString& Truncate (TCLPLUS::UInt_t nNewLength)  ;
+  TCLPLUS::Bool_t isCommand () const  ;
   //
   //   Match a substring in the string - using glob rules
   //
-  Bool_t Match (const char*       pPattern) const;
-  Bool_t Match (std::string&      rPattern) const {
+  TCLPLUS::Bool_t Match (const char*       pPattern) const;
+  TCLPLUS::Bool_t Match (std::string&      rPattern) const {
     return Match(rPattern.c_str());
   }
-  Bool_t Match (const CTCLString& rPattern) const {
+  TCLPLUS::Bool_t Match (const CTCLString& rPattern) const {
     return Match(Tcl_DStringValue(&rPattern.m_String));
   }
 

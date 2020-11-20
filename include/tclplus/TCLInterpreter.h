@@ -45,7 +45,7 @@
 #endif
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 
@@ -139,13 +139,13 @@ public:
   // Evaluate a script and store it it's commands in the 
   // history list for later retrieval
   //
-  std::string RecordAndEval (const char* pScript, Bool_t fEval=kfFALSE);
+  std::string RecordAndEval (const char* pScript, TCLPLUS::Bool_t fEval=TCLPLUS::kfFALSE);
   std::string RecordAndEval(const CTCLString& rScript, 
-			    Bool_t fEval=kfFALSE)  {
+			    TCLPLUS::Bool_t fEval=TCLPLUS::kfFALSE)  {
     return RecordAndEval((const char*)(rScript), fEval);
   }
   std::string RecordAndEval(const std::string& rScript,
-			    Bool_t fEval = kfFALSE)  {
+			    TCLPLUS::Bool_t fEval = TCLPLUS::kfFALSE)  {
     return RecordAndEval(rScript.c_str(), fEval);
   }
   //
@@ -160,29 +160,29 @@ public:
   }
   //  Evaluate string 
   //
-  Long_t ExprLong (const char* pExpression)   ;
-  Long_t ExprLong (std::string& rExpression) {
+  TCLPLUS::Long_t ExprLong (const char* pExpression)   ;
+  TCLPLUS::Long_t ExprLong (std::string& rExpression) {
     return ExprLong(rExpression.c_str());
   }
-  Long_t ExprLong (const CTCLString& rExpr)  {
+  TCLPLUS::Long_t ExprLong (const CTCLString& rExpr)  {
     return ExprLong((const char*)(rExpr));
   }
   // Evaluate a double:
   //
-  DFloat_t ExprDouble (const char* pExpression)   ;
-  DFloat_t ExprDouble (const CTCLString& rExpression)  {
+  TCLPLUS::DFloat_t ExprDouble (const char* pExpression)   ;
+  TCLPLUS::DFloat_t ExprDouble (const CTCLString& rExpression)  {
     return ExprDouble ((const char*)(rExpression));
   }
-  DFloat_t ExprDouble(const std::string& rExpression)  {
+  TCLPLUS::DFloat_t ExprDouble(const std::string& rExpression)  {
     return ExprDouble(rExpression.c_str());
   }
   // Evaluate a boolean:
   //
-  Bool_t ExprBoolean (const char*  pExpression)   ;
-  Bool_t ExprBoolean (const CTCLString& rExpression)  {
+  TCLPLUS::Bool_t ExprBoolean (const char*  pExpression)   ;
+  TCLPLUS::Bool_t ExprBoolean (const CTCLString& rExpression)  {
     return ExprBoolean((const char*)(rExpression));
   }
-  Bool_t ExprBoolean(const std::string& rExpression)  {
+  TCLPLUS::Bool_t ExprBoolean(const std::string& rExpression)  {
     return ExprBoolean(rExpression.c_str());
   }
   // Substitute for tilde in some filename.
@@ -197,10 +197,10 @@ public:
   
   std::string PosixError () const  ;
   static  std::string ErrnoId ()   ;
-  static  std::string SignalId (UInt_t nSignal)   ;
-  static  std::string SignalMsg (UInt_t nSignal)   ;
-  void DetachProcess (const std::vector<UInt_t>& rPids) const  ;
-  void DetachProcess(UInt_t nPids, Int_t* pPids) const {
+  static  std::string SignalId (TCLPLUS::UInt_t nSignal)   ;
+  static  std::string SignalMsg (TCLPLUS::UInt_t nSignal)   ;
+  void DetachProcess (const std::vector<TCLPLUS::UInt_t>& rPids) const  ;
+  void DetachProcess(TCLPLUS::UInt_t nPids, TCLPLUS::Int_t* pPids) const {
     Tcl_DetachPids(nPids, (Tcl_Pid*)pPids);
   }
   void ReapDetachedProcesses () const {
@@ -210,12 +210,12 @@ public:
 		   Tcl_CmdProc* pCommandProcessor, 
 		   ClientData pData, 
 		   Tcl_CmdDeleteProc* pDeleteProcessor=
-		   reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(kpNULL))) const  ;
+		   reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(TCLPLUS::kpNULL))) const  ;
   void AddCommand(const std::string& rCommandName,
 		  Tcl_CmdProc* pCommandProcessor,
 		  ClientData pData,
 		  Tcl_CmdDeleteProc* pDeleteProcessor = 
-		                    reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(kpNULL))) const {
+		                    reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(TCLPLUS::kpNULL))) const {
     AddCommand(rCommandName.c_str(), pCommandProcessor, pData, 
 	       pDeleteProcessor);
   }
@@ -223,7 +223,7 @@ public:
 		  Tcl_CmdProc* pCommandProcessor,
 		  ClientData pData,
 		  Tcl_CmdDeleteProc* pDeleteProcessor = 
-		                       reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(kpNULL))) const {
+		                       reinterpret_cast<Tcl_CmdDeleteProc*>(reinterpret_cast<size_t>(TCLPLUS::kpNULL))) const {
     AddCommand((const char*)(rCommandName), pCommandProcessor,
 	       pData, pDeleteProcessor);
   }
@@ -238,7 +238,10 @@ public:
 
   // Access to Tcl Channels inquiry:
   //
-  Tcl_Channel GetChannel(const std::string& rName, Int_t* pMode=(Int_t*)kpNULL);
+  Tcl_Channel GetChannel(
+    const std::string& rName,
+    TCLPLUS::Int_t* pMode=(TCLPLUS::Int_t*)TCLPLUS::kpNULL
+  );
   std::vector<std::string> GetChannelNames(const std::string& rPattern);
 
 
