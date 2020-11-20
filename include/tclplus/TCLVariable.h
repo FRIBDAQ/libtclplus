@@ -42,7 +42,7 @@
 #endif                               
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 #include <string>
@@ -50,8 +50,8 @@
 class CTCLVariable  : public CTCLInterpreterObject        
 {
   std::string m_sVariable;	// Name of the variable represented.
-  Bool_t m_fTracing;		// kfTRUE if tracing is enabled.
-  Int_t  m_nTraceFlags;		// Set of trace flags for variable.
+  TCLPLUS::Bool_t m_fTracing;		// kfTRUE if tracing is enabled.
+  TCLPLUS::Int_t  m_nTraceFlags;		// Set of trace flags for variable.
   std::string m_sTraceIndex;
 public:
   // Default construtor needed to allow use in STL container.
@@ -65,13 +65,13 @@ public:
 			//Constructor with arguments
 
 
-  CTCLVariable (std::string am_sVariable,  Bool_t am_fTracing  )  :   
+  CTCLVariable (std::string am_sVariable,  TCLPLUS::Bool_t am_fTracing  )  :   
     CTCLInterpreterObject(),
     m_sVariable (am_sVariable),  
     m_fTracing (am_fTracing)  
   { }         
   CTCLVariable (CTCLInterpreter* pInterp, 
-		std::string am_sVariable,  Bool_t am_fTracing  )  :   
+		std::string am_sVariable,  TCLPLUS::Bool_t am_fTracing  )  :   
     CTCLInterpreterObject(pInterp),
     m_sVariable (am_sVariable),  
     m_fTracing (am_fTracing)  
@@ -82,7 +82,7 @@ public:
   CTCLVariable (const CTCLVariable& aCTCLVariable )   : 
     CTCLInterpreterObject (aCTCLVariable),
     m_sVariable(" "),
-    m_fTracing(kfFALSE)
+    m_fTracing(TCLPLUS::kfFALSE)
   {   
     DoAssign(aCTCLVariable);
   }                                     
@@ -116,7 +116,7 @@ public:
   {
     return m_sVariable;
   }
-  Bool_t IsTracing() const
+  TCLPLUS::Bool_t IsTracing() const
   {
     return m_fTracing;
   }
@@ -130,7 +130,7 @@ public:
     m_sVariable = am_sVariable;
   }
 protected:
-  void setTracing (Bool_t am_fTracing)
+  void setTracing (TCLPLUS::Bool_t am_fTracing)
   { 
     m_fTracing = am_fTracing;
   }
@@ -155,7 +155,7 @@ public:
   int Link (void* pVariable, int Type)  ;
   void Unlink ()  ;
   int Trace (int flags=TCL_TRACE_READS | TCL_TRACE_WRITES | TCL_TRACE_UNSETS,
-	     char* pIndex = (char*)kpNULL)  ;
+	     char* pIndex = (char*)TCLPLUS::kpNULL)  ;
 
   void UnTrace ()  ;
  

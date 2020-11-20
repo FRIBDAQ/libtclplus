@@ -80,7 +80,7 @@ include_HEADERS = \
 	$(top_srcdir)/include/tclplus/CConfigurableObject.h
 
 noinst_HEADERS = $(top_srcdir)/include/tclplus/Asserts.h \
-	$(top_srcdir)/include/daqdatatypes.h
+	$(top_srcdir)/include/libtclplusdatatypes.h
 
 # evttclsh - a tclsh that has an event loop constantly running.
 bin_PROGRAMS		=	evttclsh

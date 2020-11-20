@@ -131,7 +131,7 @@ CTCLInterpreter::GlobalEval(const char* pScript)
 //     script evaluation
 //
 std::string 
-CTCLInterpreter::RecordAndEval(const char* pScript, Bool_t fEvaluate) 
+CTCLInterpreter::RecordAndEval(const char* pScript, TCLPLUS::Bool_t fEvaluate) 
 {
 // Records and optionally evaluates
 //  the script parameter in the TCL History list.
@@ -216,7 +216,7 @@ CTCLInterpreter::ExprString(const char* pExpression)
 //  Operation Type:
 //     Expression Evaluation
 //
-Long_t 
+TCLPLUS::Long_t 
 CTCLInterpreter::ExprLong(const char* pExpression) 
 {
 // Evaluates the specified string as an expression
@@ -234,7 +234,7 @@ CTCLInterpreter::ExprLong(const char* pExpression)
 
   Tcl_Obj* expressionObject = Tcl_NewStringObj(pExpression, -1);
   Tcl_IncrRefCount(expressionObject); // So I can explicitly kill it.
-  Long_t result;
+  TCLPLUS::Long_t result;
 
   int Status = Tcl_ExprLongObj(m_pInterpreter, expressionObject, &result);
   Tcl_DecrRefCount(expressionObject); // Destroy expression.
@@ -261,7 +261,7 @@ CTCLInterpreter::ExprLong(const char* pExpression)
 //  Operation Type:
 //     Expression evaluator
 //
-DFloat_t 
+TCLPLUS::DFloat_t 
 CTCLInterpreter::ExprDouble(const char* pExpression)
 {
 // Evaluates a string as an expression
@@ -280,7 +280,7 @@ CTCLInterpreter::ExprDouble(const char* pExpression)
 
   Tcl_Obj* expressionObject = Tcl_NewStringObj(pExpression, -1);
   Tcl_IncrRefCount(expressionObject); // So I can explicitly kill it.
-  DFloat_t result;
+  TCLPLUS::DFloat_t result;
 
   int Status = Tcl_ExprDoubleObj(m_pInterpreter, expressionObject, &result);
   Tcl_DecrRefCount(expressionObject); // Destroy expression.
@@ -307,7 +307,7 @@ CTCLInterpreter::ExprDouble(const char* pExpression)
 //  Operation Type:
 //     Expression Evaluation
 //
-Bool_t 
+TCLPLUS::Bool_t 
 CTCLInterpreter::ExprBoolean(const char*  pExpression) 
 {
 // Evaluates a character string as a
@@ -341,7 +341,7 @@ CTCLInterpreter::ExprBoolean(const char*  pExpression)
   }
 
 
-  return (result ? kfTRUE : kfFALSE);
+  return (result ? TCLPLUS::kfTRUE : TCLPLUS::kfFALSE);
 }
 //////////////////////////////////////////////////////////////////////////
 //
@@ -415,7 +415,7 @@ CTCLInterpreter::ErrnoId()
 //     POSIX interface
 //
 std::string 
-CTCLInterpreter::SignalId(UInt_t nSignal) 
+CTCLInterpreter::SignalId(TCLPLUS::UInt_t nSignal) 
 {
 // Returns a string identifying a signal
 // e.g. SIGINT
@@ -424,7 +424,7 @@ CTCLInterpreter::SignalId(UInt_t nSignal)
 //   UInt_t nSignal:
 //      The signal to lookup.
 
-  return std::string(Tcl_SignalId((Int_t)nSignal));
+  return std::string(Tcl_SignalId((TCLPLUS::Int_t)nSignal));
 
 }
 //////////////////////////////////////////////////////////////////////////
@@ -435,7 +435,7 @@ CTCLInterpreter::SignalId(UInt_t nSignal)
 //     POSIX interface.
 //
 std::string 
-CTCLInterpreter::SignalMsg(UInt_t nSignal) 
+CTCLInterpreter::SignalMsg(TCLPLUS::UInt_t nSignal) 
 {
 // Returns a human readable message which
 // identifies the signal
@@ -455,7 +455,7 @@ CTCLInterpreter::SignalMsg(UInt_t nSignal)
 //     POSIX interface
 //
 void 
-CTCLInterpreter::DetachProcess(const std::vector<UInt_t>& rPids) const 
+CTCLInterpreter::DetachProcess(const std::vector<TCLPLUS::UInt_t>& rPids) const 
 {
 // Passes responsibility for a set of process ids to
 // TCL's zombie process reaper functions  On error
@@ -472,8 +472,8 @@ CTCLInterpreter::DetachProcess(const std::vector<UInt_t>& rPids) const
 //                      and rPids refers to a vector of process ids.
 //   
 
-  UInt_t nPids = rPids.size();
-  Int_t  *pPids= new Int_t[nPids];
+  TCLPLUS::UInt_t nPids = rPids.size();
+  TCLPLUS::Int_t  *pPids= new TCLPLUS::Int_t[nPids];
   for(int i = 0; i < nPids; i++) {
     pPids[i] = rPids[i];
   }
@@ -596,7 +596,7 @@ CTCLInterpreter::GetResultString() const
     \retval nonnull- Opaque pointer to the channel.
 */
 Tcl_Channel
-CTCLInterpreter::GetChannel(const string& rName, Int_t* pMode)
+CTCLInterpreter::GetChannel(const string& rName, TCLPLUS::Int_t* pMode)
 {
   return Tcl_GetChannel(m_pInterpreter, (tclConstCharPtr)rName.c_str(), pMode);
 }
@@ -627,7 +627,7 @@ CTCLInterpreter::GetChannelNames(const string& rPattern)
   if(status == TCL_OK) {
     Tcl_Obj* pResult = Tcl_GetObjResult(m_pInterpreter);
     if(pResult) {
-      char* pList = Tcl_GetStringFromObj(pResult, (Int_t*)kpNULL);
+      char* pList = Tcl_GetStringFromObj(pResult, (TCLPLUS::Int_t*)TCLPLUS::kpNULL);
       if(pList) {
 	CTCLList ResultList(this, pList);
 	ResultList.Split(result);

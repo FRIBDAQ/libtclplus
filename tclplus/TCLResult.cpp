@@ -41,7 +41,7 @@ static const char* Copyright = "(C) Copyright Michigan State University 2015, Al
 #include "TCLString.h"
 #include "TCLInterpreter.h"
 #include <tcl.h>
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #include <assert.h>
 
 

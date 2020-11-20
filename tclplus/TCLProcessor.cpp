@@ -191,10 +191,10 @@ CTCLProcessor::ParseInt(const char* pString, int* pInteger)
   //
 
   CTCLInterpreter* pInterpObj = getInterpreter();
-  if(pInterpObj == (CTCLInterpreter*)kpNULL)
+  if(pInterpObj == (CTCLInterpreter*)TCLPLUS::kpNULL)
     return TCL_ERROR;		// Not bound...
   Tcl_Interp*      pInterp    = pInterpObj->getInterpreter();
-  if(pInterp == (Tcl_Interp*)kpNULL)
+  if(pInterp == (Tcl_Interp*)TCLPLUS::kpNULL)
     return TCL_ERROR;
 
   return Tcl_GetInt(pInterp, (char*)pString, pInteger);
@@ -221,10 +221,10 @@ CTCLProcessor::ParseDouble(const char* pString, double* pDouble)
 {
 
   CTCLInterpreter* pInterpObj = getInterpreter();
-  if(pInterpObj == (CTCLInterpreter*)kpNULL)
+  if(pInterpObj == (CTCLInterpreter*)TCLPLUS::kpNULL)
     return TCL_ERROR;		// Not bound...
   Tcl_Interp*      pInterp    = pInterpObj->getInterpreter();
-  if(pInterp == (Tcl_Interp*)kpNULL)
+  if(pInterp == (Tcl_Interp*)TCLPLUS::kpNULL)
     return TCL_ERROR;
 
   return Tcl_GetDouble(pInterp, (char*)pString, pDouble);
@@ -247,15 +247,15 @@ CTCLProcessor::ParseDouble(const char* pString, double* pDouble)
            reason for the parse failure to be retrieved.
  */
 int 
-CTCLProcessor::ParseBoolean(const char* pString, Bool_t* pBoolean) 
+CTCLProcessor::ParseBoolean(const char* pString, TCLPLUS::Bool_t* pBoolean) 
 {
 
 
   CTCLInterpreter* pInterpObj = getInterpreter();
-  if(pInterpObj == (CTCLInterpreter*)kpNULL)
+  if(pInterpObj == (CTCLInterpreter*)TCLPLUS::kpNULL)
     return TCL_ERROR;		// Not bound...
   Tcl_Interp*      pInterp    = pInterpObj->getInterpreter();
-  if(pInterp == (Tcl_Interp*)kpNULL)
+  if(pInterp == (Tcl_Interp*)TCLPLUS::kpNULL)
     return TCL_ERROR;
 
   int flag;

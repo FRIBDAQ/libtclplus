@@ -48,7 +48,7 @@ static const char* Copyright = "(C) Copyright Michigan State University 2015, Al
 
 #include <string>
 
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #include <assert.h>
 #include <tcl.h>
 #include <tk.h>
@@ -137,7 +137,7 @@ extern "C" {
 
 
     gpTCLInterpreter = new CTCLInterpreter(interp); 
-    assert(gpTCLInterpreter != (CTCLInterpreter*)kpNULL);
+    assert(gpTCLInterpreter != (CTCLInterpreter*)TCLPLUS::kpNULL);
 
     gpTCLApplication->Bind(*gpTCLInterpreter);
 

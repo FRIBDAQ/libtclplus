@@ -34,7 +34,7 @@
 #define TCLINTERPRETEROBJECT_H
 
 #ifndef DAQTYPES_H
-#include <daqdatatypes.h>
+#include <libtclplusdatatypes.h>
 #endif
 
 
@@ -103,7 +103,7 @@ public:
 protected:
   CTCLInterpreter* AssertIfNotBound() {
     CTCLInterpreter* pInterp = getInterpreter();
-    assert(pInterp != kpNULL);
+    assert(pInterp != TCLPLUS::kpNULL);
     return pInterp;
   }
 

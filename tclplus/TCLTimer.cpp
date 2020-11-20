@@ -66,7 +66,7 @@ CTCLTimer::CallbackRelay(ClientData pObject)
 
 
   CTCLTimer* pTimer = (CTCLTimer*) pObject;
-  pTimer->m_fSet = kfFALSE;		// No longer set when here.
+  pTimer->m_fSet = TCLPLUS::kfFALSE;		// No longer set when here.
   (*pTimer)();
 
 }
@@ -90,7 +90,7 @@ CTCLTimer::Set()
     m_tToken = Tcl_CreateTimerHandler(m_nMsec, 
 				     CallbackRelay,
 				     (ClientData)this);
-    m_fSet = kfTRUE;
+    m_fSet = TCLPLUS::kfTRUE;
   }
 
   
@@ -113,7 +113,7 @@ CTCLTimer::Clear()
   
   if(m_fSet) {
     Tcl_DeleteTimerHandler(m_tToken);
-    m_fSet = kfFALSE;
+    m_fSet = TCLPLUS::kfFALSE;
     m_tToken = 0;
   }
 
