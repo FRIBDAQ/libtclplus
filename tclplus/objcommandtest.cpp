@@ -111,7 +111,7 @@ CPPUNIT_TEST_SUITE_REGISTRATION(objectcommand);
 
 // Check that the command is constructed properly.
 void objectcommand::construction() {
-  EQMSG("name", string("echo"), m_pCommand->getName());
+  EQMSG("name", string("::echo"), m_pCommand->getName());
 
   Tcl_CmdInfo info = m_pCommand->getInfo();
 
