@@ -142,7 +142,9 @@ CTCLObjectProcessor::getName() const
 {
   if (m_fRegistered) {
     CTCLInterpreter* pInterp = getInterpreter();
-    return string(Tcl_GetCommandName(pInterp->getInterpreter(), m_Token));
+    Tcl_Obj*  pName = Tcl_NewStringObj("", 0);
+    Tcl_GetCommandFullName(pInterp->getInterpreter(), m_Token, pName);
+    return std::string(Tcl_GetString(pName));
   }
   else {
     return m_Name;		// Not registered.
