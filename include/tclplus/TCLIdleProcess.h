@@ -51,8 +51,6 @@
 #include <libtclplusdatatypes.h>
 #endif
 
-#include <tk.h>
-
 class CTCLIntpreter;
 
 // The class definition:

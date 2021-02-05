@@ -23,7 +23,6 @@ static const char* Copyright = "(C) Copyright Michigan State University 2015, Al
 // 
 
 #include <config.h>
-#include <tk.h>
 
 #include "TCLApplication.h"
 #include "TCLVariable.h"

@@ -51,7 +51,6 @@ static const char* Copyright = "(C) Copyright Michigan State University 2015, Al
 #include <libtclplusdatatypes.h>
 #include <assert.h>
 #include <tcl.h>
-#include <tk.h>
 #include <iostream>
 
 using namespace std;
