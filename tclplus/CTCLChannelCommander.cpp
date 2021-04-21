@@ -43,7 +43,8 @@ using namespace std;
 CTCLChannelCommander::CTCLChannelCommander(CTCLInterpreter* interp,
 					  Tcl_Channel      channel) :
   m_pInterp(interp),
-  m_channel(channel)
+  m_channel(channel),
+  m_running(false)
 
 {
   // strings get constructed as empty which is fine for us.
@@ -74,10 +75,11 @@ CTCLChannelCommander::~CTCLChannelCommander()
 void
 CTCLChannelCommander::start()
 {
-
-  Tcl_CreateChannelHandler(m_channel, TCL_READABLE | TCL_EXCEPTION,
+  if (m_channel) {
+    Tcl_CreateChannelHandler(m_channel, TCL_READABLE | TCL_EXCEPTION,
 			   inputRelay, this);
-
+  }
+  m_running = true;
 }
 
 /*!
@@ -89,9 +91,12 @@ CTCLChannelCommander::start()
 void
 CTCLChannelCommander::stop()
 {
-  if (m_channel){ 
-    Tcl_DeleteChannelHandler(m_channel, inputRelay, this);
-    m_channel = 0;
+  if (m_running){ 
+    if (m_channel) {
+      Tcl_DeleteChannelHandler(m_channel, inputRelay, this);
+    }
+    m_running = false;
+    
   }
 }
 
@@ -111,7 +116,7 @@ CTCLChannelCommander::getChannel() const
 bool
 CTCLChannelCommander::stopped() const
 {
-  return m_channel == 0;
+  return !m_running;
 }
 ////////////////////////////////////////////////////////////////////////////
 
