@@ -36,8 +36,8 @@
 **--
 **/
 
-#ifndef DAQTYPES_H
-#define DAQTYPES_H
+#ifndef TCLPLUSDAQTYPES_H
+#define TCLPLUSDAQTYPES_H
 
 
 #include <sys/types.h>
