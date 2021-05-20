@@ -36,8 +36,8 @@
 **--
 **/
 
-#ifndef DAQTYPES_H
-#define DAQTYPES_H
+#ifndef TCLPLUSTYPES_H
+#define TCLPLUSTYPES_H
 
 
 #include <sys/types.h>

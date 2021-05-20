@@ -49,9 +49,7 @@
 #include "TCLProcessor.h"
 #endif                                                               
 
-#ifndef DAQTYPES_H
-#include <tclplusdatatypes.h>
-#endif
+#include <libtclplusdatatypes.h>
 
 #include <list>
 #include <string>
