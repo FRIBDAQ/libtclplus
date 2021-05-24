@@ -42,7 +42,7 @@ protected:
   CTCLInterpreter*   m_pInterp;
   Tcl_Channel        m_channel;
   std::string        m_command;
-
+  bool               m_active;
 
   // constructors and canonicals.
 

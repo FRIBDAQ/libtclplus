@@ -74,10 +74,11 @@ CTCLChannelCommander::~CTCLChannelCommander()
 void
 CTCLChannelCommander::start()
 {
-
-  Tcl_CreateChannelHandler(m_channel, TCL_READABLE | TCL_EXCEPTION,
-			   inputRelay, this);
-
+  if (m_channel && !m_active) {
+    Tcl_CreateChannelHandler(m_channel, TCL_READABLE | TCL_EXCEPTION,
+			     inputRelay, this);
+  }
+  m_active = true;
 }
 
 /*!
@@ -89,10 +90,11 @@ CTCLChannelCommander::start()
 void
 CTCLChannelCommander::stop()
 {
-  if (m_channel){ 
+  if (m_channel && m_active){ 
     Tcl_DeleteChannelHandler(m_channel, inputRelay, this);
     m_channel = 0;
   }
+  m_active = false;
 }
 
 /*!
@@ -111,7 +113,7 @@ CTCLChannelCommander::getChannel() const
 bool
 CTCLChannelCommander::stopped() const
 {
-  return m_channel == 0;
+  return !m_active;
 }
 ////////////////////////////////////////////////////////////////////////////
 
