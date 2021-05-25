@@ -43,7 +43,8 @@ using namespace std;
 CTCLChannelCommander::CTCLChannelCommander(CTCLInterpreter* interp,
 					  Tcl_Channel      channel) :
   m_pInterp(interp),
-  m_channel(channel)
+  m_channel(channel),
+  m_active(false)
 
 {
   // strings get constructed as empty which is fine for us.
