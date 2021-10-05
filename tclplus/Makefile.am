@@ -102,7 +102,7 @@ clean-local:
 EXTRA_DIST = tkAppInit.c tclplus.xml
 
 ### disabled for now, will have fox hook these back up
- noinst_PROGRAMS = tracetests interptests tcpservertest
+ noinst_PROGRAMS = tracetests interptests tcpservertest threadtests
 
 tracetests_SOURCES = TestRunner.cpp \
 			ccallbacktest.cpp \
@@ -123,6 +123,7 @@ tracetests_DEPENDENCIES = $(testableObjects)
 
 
 interptests_DEPENDENCIES = $(testableObjects) TestRunner.lo
+
 tcpservertest_SOURCES	= 	tcpservertest.cpp
 tcpservertest_DEPENDENCIES	= 	libtclPlus.la
 tcpservertest_LDADD		= 	libtclPlus.la	\
@@ -130,4 +131,12 @@ tcpservertest_LDADD		= 	libtclPlus.la	\
 			@TCL_LIBS@ @CPPUNIT_LIBS@
 tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 
- TESTS = @builddir@/tracetests @builddir@/interptests
+
+threadtests_DEPENENCIES = $(testableObjects)
+threadtests_SOURCES     = threadtests.cpp
+threadtests_LDADD      = $(testableObjects) TestRunner.lo \
+                                @top_srcdir@/exception/libException.la \
+                        @TCL_LIBS@ @CPPUNIT_LIBS@
+
+
+ TESTS = @builddir@/tracetests @builddir@/interptests @builddir@/threadtests
