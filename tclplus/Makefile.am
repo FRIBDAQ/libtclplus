@@ -25,7 +25,7 @@ testableSources = TCLInterpreter.cpp TCLProcessor.cpp  \
 	TCLCompatibilityProcessor.cpp TCLLiveEventLoop.cpp	\
 	CTCLChannelCommander.cpp CTCLStdioCommander.cpp	\
 	CTCLTcpServerInstance.cpp CTCLServer.cpp TCLObjectPackage.cpp \
-	TCLPackagedObjectProcessor.cpp
+	TCLPackagedObjectProcessor.cpp CTCLThread.cpp
 # CItemConfiguration.cpp  CConfigurableObject.cpp
 
 
@@ -39,7 +39,7 @@ testableObjects = TCLInterpreter.lo   TCLProcessor.lo    \
 	TCLObject.lo   TCLChannel.lo   TCLTracedVariable.lo   \
 	CLanguageTraceCallbacks.lo  TCLObjectProcessor.lo \
 	TCLCompatibilityProcessor.lo TCLPackagedObjectProcessor.lo \
-	TCLObjectPackage.lo
+	TCLObjectPackage.lo CTCLThread.lo
 
 libtclPlus_la_SOURCES = TCLApplication.cpp $(testableSources)
 
@@ -77,7 +77,9 @@ include_HEADERS = \
 	$(top_srcdir)/include/tclplus/TCLObjectPackage.h \
 	$(top_srcdir)/include/tclplus/TCLPackagedObjectProcessor.h \
 	$(top_srcdir)/include/tclplus/CItemConfiguration.h \
-	$(top_srcdir)/include/tclplus/CConfigurableObject.h
+	$(top_srcdir)/include/tclplus/CConfigurableObject.h \
+	@top_srcdir@/include/tclplus/CTCLThread.h
+
 
 noinst_HEADERS = $(top_srcdir)/include/tclplus/Asserts.h \
 	$(top_srcdir)/include/libtclplusdatatypes.h
@@ -128,4 +130,4 @@ tcpservertest_LDADD		= 	libtclPlus.la	\
 			@TCL_LIBS@ @CPPUNIT_LIBS@
 tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 
- TESTS = ./tracetests ./interptests
+ TESTS = @builddir@/tracetests @builddir@/interptests
