@@ -33,7 +33,7 @@
 #ifndef TCLINTERPRETEROBJECT_H  //Required for current class
 #define TCLINTERPRETEROBJECT_H
 
-#ifndef DAQTYPES_H
+#ifndef TCLPLUSTYPES_H
 #include <libtclplusdatatypes.h>
 #endif
 

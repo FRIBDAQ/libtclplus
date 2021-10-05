@@ -44,7 +44,7 @@
 #include "TCLString.h"
 #endif
 
-#ifndef DAQTYPES_H
+#ifndef TCLPLUSTYPES_H
 #include <libtclplusdatatypes.h>
 #endif
 
