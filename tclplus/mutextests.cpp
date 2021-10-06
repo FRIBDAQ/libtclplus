@@ -35,7 +35,6 @@ class mutextests : public CppUnit::TestFixture {
     CPPUNIT_TEST_SUITE_END();
     
 private:
-    CTCLInterpreter* m_pInterp;
     int m_counter;
     CTCLMutex* m_pMutex;
     
