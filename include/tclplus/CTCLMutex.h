@@ -1,73 +1,112 @@
+#ifndef CTCLMUTEX_H
+#define CTCLMUTEX_H
 /*
     This software is Copyright by the Board of Trustees of Michigan
-    State University (c) Copyright 2017.
+    State University (c) Copyright 2005.
 
     You may use this software under the terms of the GNU public license
     (GPL).  The terms of this license are described at:
 
      http://www.gnu.org/licenses/gpl.txt
 
-     Authors:
+     Author:
              Ron Fox
-             Giordano Cerriza
 	     NSCL
 	     Michigan State University
 	     East Lansing, MI 48824-1321
 */
 
-/** @file:  CTCLMutex.h
- *  @brief: Class that encpsulates a Mutex via the Tcl API.
- */
-#ifndef CTCLMUTEX_H
-#define CTCLMUTEX_H
-#include <tcl.h>
+// Note: For reasons unknown to me I can't get Tcl_MutexLock to actually
+//       do anything so my tests failed.  I do know how to use pthread mutexes
+//       so I imported this working class from NSCLDAQ/main/base/thread
+//       and then some typedefs to make names ok.
 
-/**
- *  @class CTCLMutex
- *     Class to encapsulate a mutex using the Tcl api.
- *     - Construction creates the mutex,
- *     - Destruction finalizes the mutex,
- *     - Lock and Unlock do that as well.
- *
- * @note - we don't create the mutex with TCL_DECLARE_MUTEX because
- *         *   They make it a static and that's bad for us.
- *         *   We know we need threading turned on so the other reason --
- *             making it a nullity is not relevant for us.
- */
-class CTCLMutex {
-private:
-    Tcl_Mutex m_mutex;
-public:
-    CTCLMutex();
-    virtual ~CTCLMutex();
-    
-    void lock();
-    void unlock();
+#include <pthread.h>
+
+/*!
+  Direct encapsulation of a pthread mutex attribute block.  We only support the
+attributes in the base pthreads specification (not the realtime nor the
+advanced realtime specs), as you should be able to count on those always being
+available
+
+*/
+struct CMutexAttr
+{
+  pthread_mutexattr_t  m_attributes;
+  CMutexAttr();
+  ~CMutexAttr();
+
+  void setShared();
+  void setUnshared();
+  bool isShareable();
+  
+  void setType(int type);
+  int  getType();
+
+  static void  throwifbad (int status, const char* message);
 };
 
-/**
- * @class CTCLCriticalSection
- *    This class implements a critical section of code.  Critical sections
- *    of code are sections of code that can only be executed by one thread at a time.
- *    CTCLCritical section constructs on a mutex and locks that mutex at construction
- *    on destruction the mutex is unlocked.  A typical example is:
- * \verbatim
- *      CTCLMutex guard;      // Used to guard the critical sections:
- *      ...
- *      {
- *         CTCLCriticalSection(guard);        // guard is locked
- *              ... Thread critical code
- *      }                                     // guard is unlocked.
- */
-class CTCLCriticalSection
+
+/*!
+  Direct encapsulation of a pthread  mutex.
+
+*/
+class CMutex
 {
-private:
-    CTCLMutex& m_mutex;
 public:
-    CTCLCriticalSection (CTCLMutex& mutex) : m_mutex(mutex) {
+  pthread_mutex_t      m_mutex;            //  The underlying mutex.
+  
+public:
+  CMutex();
+  CMutex(pthread_mutexattr_t& attributes);
+  CMutex(CMutexAttr&          attributes);
+  virtual ~CMutex();
+
+private:
+  CMutex(const CMutex&);
+  CMutex& operator=(const CMutex&);
+  int operator==(const CMutex&) const;
+  int operator!=(const CMutex&) const;
+
+
+
+  // Synchronization operations.
+public:
+
+  void lock();
+  bool trylock();
+  void unlock();
+
+private:
+  void create(pthread_mutexattr_t* pAttributes);
+};
+
+
+
+/**
+ *  Safe lock/unlock of mutexes
+ *  Declaring a CriticalSection object in a block will lock the mutex and
+ *  gaurantee the mutex is unlocked when the block is exited.
+ *  The scope of the block is the period the mutex is held.
+ *  
+ */
+class CriticalSection {
+private:
+    CMutex& m_mutex;
+public:
+    CriticalSection(CMutex& mutex) : m_mutex(mutex)
+    {
         m_mutex.lock();
     }
-    ~CTCLCriticalSection() {m_mutex.unlock(); }
+    ~CriticalSection() {
+        m_mutex.unlock();
+    }
 };
+// Sneaky trick.
+
+using CTCLMutex = CMutex;
+using CTCLMutexAttr = CMutexAttr;
+
+
 
 #endif

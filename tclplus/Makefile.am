@@ -39,7 +39,7 @@ testableObjects = TCLInterpreter.lo   TCLProcessor.lo    \
 	TCLObject.lo   TCLChannel.lo   TCLTracedVariable.lo   \
 	CLanguageTraceCallbacks.lo  TCLObjectProcessor.lo \
 	TCLCompatibilityProcessor.lo TCLPackagedObjectProcessor.lo \
-	TCLObjectPackage.lo CTCLThread.lo
+	TCLObjectPackage.lo CTCLThread.lo CTCLMutex.lo
 
 libtclPlus_la_SOURCES = TCLApplication.cpp $(testableSources)
 
@@ -134,7 +134,7 @@ tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 
 
 threadtests_DEPENENCIES = $(testableObjects)
-threadtests_SOURCES     = threadtests.cpp
+threadtests_SOURCES     = threadtests.cpp mutextests.cpp
 threadtests_LDADD      = $(testableObjects) TestRunner.lo \
                                 @top_srcdir@/exception/libException.la \
                         @TCL_LIBS@ @CPPUNIT_LIBS@
