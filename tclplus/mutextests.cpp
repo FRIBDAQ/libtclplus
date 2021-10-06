@@ -40,13 +40,13 @@ private:
     
 public:
     void setUp() {
-        m_pInterp = new CTCLInterpreter;
+        
         m_counter = 0;
         m_pMutex  = new CTCLMutex;
     }
     void tearDown() {
         delete m_pMutex;
-        delete m_pInterp;
+
     }
 protected:
     void testrace();

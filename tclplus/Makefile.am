@@ -41,7 +41,8 @@ testableObjects = TCLInterpreter.lo   TCLProcessor.lo    \
 	TCLCompatibilityProcessor.lo TCLPackagedObjectProcessor.lo \
 	TCLObjectPackage.lo CTCLThread.lo CTCLMutex.lo
 
-libtclPlus_la_SOURCES = TCLApplication.cpp $(testableSources)
+libtclPlus_la_SOURCES = TCLApplication.cpp CTCLConditionVariable.cpp \
+	$(testableSources)
 
 include_HEADERS = \
 	@top_srcdir@/include/tclplus/TCLApplication.h \
@@ -79,7 +80,8 @@ include_HEADERS = \
 	@top_srcdir@/include/tclplus/CItemConfiguration.h \
 	@top_srcdir@/include/tclplus/CConfigurableObject.h \
 	@top_srcdir@/include/tclplus/CTCLThread.h \
-	@top_srcdir@/include/tclplus/CTCLMutex.h
+	@top_srcdir@/include/tclplus/CTCLMutex.h \
+	@top_srcdir@/include/tclplus/CTCLConditionVariable.h
 
 
 noinst_HEADERS = @top_srcdir@/include/tclplus/Asserts.h \
