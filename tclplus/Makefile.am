@@ -139,4 +139,7 @@ threadtests_LDADD      = $(testableObjects) TestRunner.lo \
                         @TCL_LIBS@ @CPPUNIT_LIBS@
 
 
- TESTS = @builddir@/tracetests @builddir@/interptests @builddir@/threadtests
+TESTS = @builddir@/tracetests \
+	@builddir@/interptests \
+	@builddir@/threadtests 
+

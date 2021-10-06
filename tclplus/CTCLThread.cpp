@@ -20,6 +20,11 @@
  */
 #include <CTCLThread.h>
 #include <stdexcept>
+
+// Static data:
+
+Tcl_ThreadDataKey CTCLThread:: m_tsdkey;
+
 /**
  * constructor
  *    We save the stack and flags for when start is called at which point
@@ -151,6 +156,15 @@ Tcl_ThreadCreateType
 CTCLThread::runTrampoline(ClientData pRawData)
 {
     MyClientData* pData = reinterpret_cast<MyClientData*>(pRawData);
+    
+    // Evidently create exit handler needs to get the thread specific data so:
+    // We create a zero sized block since the member data are perfectly good
+    // thread specific data for this modell
+    
+    int tsdsize(0);
+    Tcl_GetThreadData(&m_tsdkey, tsdsize);     // Creates the tsd.
+    
+    
     Tcl_CreateThreadExitHandler(exitTrampoline,  pData->m_pThis);
     int result = (*pData->m_pThis)(pData->m_pArg);
     Tcl_ExitThread(result);

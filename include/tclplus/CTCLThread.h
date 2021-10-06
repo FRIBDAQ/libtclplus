@@ -40,6 +40,7 @@ private:
         CTCLThread*  m_pThis;
         ClientData   m_pArg;
     } m_trampolineArgs;
+    static Tcl_ThreadDataKey m_tsdkey;
 public:
     CTCLThread(int flags = TCL_THREAD_JOINABLE, int stacksize = TCL_THREAD_STACK_DEFAULT);
     virtual ~CTCLThread();
