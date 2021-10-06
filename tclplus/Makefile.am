@@ -25,7 +25,7 @@ testableSources = TCLInterpreter.cpp TCLProcessor.cpp  \
 	TCLCompatibilityProcessor.cpp TCLLiveEventLoop.cpp	\
 	CTCLChannelCommander.cpp CTCLStdioCommander.cpp	\
 	CTCLTcpServerInstance.cpp CTCLServer.cpp TCLObjectPackage.cpp \
-	TCLPackagedObjectProcessor.cpp CTCLThread.cpp
+	TCLPackagedObjectProcessor.cpp CTCLThread.cpp CTCLMutex.cpp
 # CItemConfiguration.cpp  CConfigurableObject.cpp
 
 
@@ -44,45 +44,46 @@ testableObjects = TCLInterpreter.lo   TCLProcessor.lo    \
 libtclPlus_la_SOURCES = TCLApplication.cpp $(testableSources)
 
 include_HEADERS = \
-	$(top_srcdir)/include/tclplus/TCLApplication.h \
-	$(top_srcdir)/include/tclplus/TCLCommandPackage.h \
-	$(top_srcdir)/include/tclplus/TCLException.h \
-	$(top_srcdir)/include/tclplus/TCLFileHandler.h \
-	$(top_srcdir)/include/tclplus/TCLHashTable.h \
-	$(top_srcdir)/include/tclplus/TCLHashTableItem.h \
-	$(top_srcdir)/include/tclplus/TCLHashTableIterator.h \
-	$(top_srcdir)/include/tclplus/TCLIdleProcess.h	\
-	$(top_srcdir)/include/tclplus/TCLInterpreter.h \
-	$(top_srcdir)/include/tclplus/TCLInterpreterObject.h \
-	$(top_srcdir)/include/tclplus/TCLList.h \
-	$(top_srcdir)/include/tclplus/TCLObject.h \
-	$(top_srcdir)/include/tclplus/TCLPackagedCommand.h \
-	$(top_srcdir)/include/tclplus/TCLProcessor.h \
-	$(top_srcdir)/include/tclplus/TCLResult.h \
-	$(top_srcdir)/include/tclplus/TCLString.h \
-	$(top_srcdir)/include/tclplus/TCLTimer.h \
-	$(top_srcdir)/include/tclplus/TCLVariable.h \
-	$(top_srcdir)/include/tclplus/TCLChannel.h \
-	$(top_srcdir)/include/tclplus/TCLVersionHacks.h \
-	$(top_srcdir)/include/tclplus/TCLTracedVariable.h \
-	$(top_srcdir)/include/tclplus/VariableTraceCallback.h \
-	$(top_srcdir)/include/tclplus/CLanguageTraceCallbacks.h \
-	$(top_srcdir)/include/tclplus/TCLObjectProcessor.h \
-	$(top_srcdir)/include/tclplus/TCLCompatibilityProcessor.h 	\
-	$(top_srcdir)/include/tclplus/TCLLiveEventLoop.h \
-	$(top_srcdir)/include/tclplus/CTCLChannelCommander.h	\
-	$(top_srcdir)/include/tclplus/CTCLStdioCommander.h \
-	$(top_srcdir)/include/tclplus/CTCLTcpServerInstance.h \
-	$(top_srcdir)/include/tclplus/CTCLServer.h	\
-	$(top_srcdir)/include/tclplus/TCLObjectPackage.h \
-	$(top_srcdir)/include/tclplus/TCLPackagedObjectProcessor.h \
-	$(top_srcdir)/include/tclplus/CItemConfiguration.h \
-	$(top_srcdir)/include/tclplus/CConfigurableObject.h \
-	@top_srcdir@/include/tclplus/CTCLThread.h
+	@top_srcdir@/include/tclplus/TCLApplication.h \
+	@top_srcdir@/include/tclplus/TCLCommandPackage.h \
+	@top_srcdir@/include/tclplus/TCLException.h \
+	@top_srcdir@/include/tclplus/TCLFileHandler.h \
+	@top_srcdir@/include/tclplus/TCLHashTable.h \
+	@top_srcdir@/include/tclplus/TCLHashTableItem.h \
+	@top_srcdir@/include/tclplus/TCLHashTableIterator.h \
+	@top_srcdir@/include/tclplus/TCLIdleProcess.h	\
+	@top_srcdir@/include/tclplus/TCLInterpreter.h \
+	@top_srcdir@/include/tclplus/TCLInterpreterObject.h \
+	@top_srcdir@/include/tclplus/TCLList.h \
+	@top_srcdir@/include/tclplus/TCLObject.h \
+	@top_srcdir@/include/tclplus/TCLPackagedCommand.h \
+	@top_srcdir@/include/tclplus/TCLProcessor.h \
+	@top_srcdir@/include/tclplus/TCLResult.h \
+	@top_srcdir@/include/tclplus/TCLString.h \
+	@top_srcdir@/include/tclplus/TCLTimer.h \
+	@top_srcdir@/include/tclplus/TCLVariable.h \
+	@top_srcdir@/include/tclplus/TCLChannel.h \
+	@top_srcdir@/include/tclplus/TCLVersionHacks.h \
+	@top_srcdir@/include/tclplus/TCLTracedVariable.h \
+	@top_srcdir@/include/tclplus/VariableTraceCallback.h \
+	@top_srcdir@/include/tclplus/CLanguageTraceCallbacks.h \
+	@top_srcdir@/include/tclplus/TCLObjectProcessor.h \
+	@top_srcdir@/include/tclplus/TCLCompatibilityProcessor.h 	\
+	@top_srcdir@/include/tclplus/TCLLiveEventLoop.h \
+	@top_srcdir@/include/tclplus/CTCLChannelCommander.h	\
+	@top_srcdir@/include/tclplus/CTCLStdioCommander.h \
+	@top_srcdir@/include/tclplus/CTCLTcpServerInstance.h \
+	@top_srcdir@/include/tclplus/CTCLServer.h	\
+	@top_srcdir@/include/tclplus/TCLObjectPackage.h \
+	@top_srcdir@/include/tclplus/TCLPackagedObjectProcessor.h \
+	@top_srcdir@/include/tclplus/CItemConfiguration.h \
+	@top_srcdir@/include/tclplus/CConfigurableObject.h \
+	@top_srcdir@/include/tclplus/CTCLThread.h \
+	@top_srcdir@/include/tclplus/CTCLMutex.h
 
 
-noinst_HEADERS = $(top_srcdir)/include/tclplus/Asserts.h \
-	$(top_srcdir)/include/libtclplusdatatypes.h
+noinst_HEADERS = @top_srcdir@/include/tclplus/Asserts.h \
+	@top_srcdir@/include/libtclplusdatatypes.h
 
 # evttclsh - a tclsh that has an event loop constantly running.
 bin_PROGRAMS		=	evttclsh
