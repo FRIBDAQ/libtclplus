@@ -5,7 +5,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include \
 
 LDADD = -ltclPlus -lException
 #-lXt -lX11 $(X11EXTRA_LDFLAGS)
-AM_LDFLAGS = -L. @TCL_LIBS@ -L$(top_srcdir)/exception 
+AM_LDFLAGS = -L. @TCL_LIBS@ -L$(top_builddir)/exception 
 
 lib_LTLIBRARIES = libtclPlus.la
 
@@ -130,7 +130,7 @@ interptests_DEPENDENCIES = $(testableObjects) TestRunner.lo
 tcpservertest_SOURCES	= 	tcpservertest.cpp
 tcpservertest_DEPENDENCIES	= 	libtclPlus.la
 tcpservertest_LDADD		= 	libtclPlus.la	\
-				@top_srcdir@/exception/libException.la \
+				@top_builddir@/exception/libException.la \
 			@TCL_LIBS@ @CPPUNIT_LIBS@
 tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 
@@ -138,7 +138,7 @@ tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 threadtests_DEPENENCIES = $(testableObjects)
 threadtests_SOURCES     = threadtests.cpp mutextests.cpp
 threadtests_LDADD      = $(testableObjects) TestRunner.lo \
-                                @top_srcdir@/exception/libException.la \
+                                @top_builddir@/exception/libException.la \
                         @TCL_LIBS@ @CPPUNIT_LIBS@
 
 
