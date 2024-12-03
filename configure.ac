@@ -1,6 +1,7 @@
 AC_PREREQ(2.61)
 AC_INIT(libtclplus, 3.0-011, fox@nscl.msu.edu)
 
+AC_CONFIG_AUX_DIR([.])
 AC_CONFIG_SRCDIR([tclplus/TCLInterpreter.cpp])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
