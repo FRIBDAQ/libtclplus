@@ -119,13 +119,13 @@ tracetests_DEPENDENCIES = $(testableObjects)
 
  tracetests_LDADD = $(TestLdflags) @TCL_LIBS@ @CPPUNIT_LIBS@
 
- interptests_SOURCES=interpretertest.cpp objecttest.cpp resulttest.cpp \
+ interptests_SOURCES=TestRunner.cpp interpretertest.cpp objecttest.cpp resulttest.cpp \
 	objcommandtest.cpp compatcommand.cpp packagetests.cpp
 
- interptests_LDADD = TestRunner.lo $(TestLdflags) @CPPUNIT_LIBS@
+ interptests_LDADD = $(TestLdflags) @CPPUNIT_LIBS@
 
 
-interptests_DEPENDENCIES = $(testableObjects) TestRunner.lo
+interptests_DEPENDENCIES = $(testableObjects) 
 
 tcpservertest_SOURCES	= 	tcpservertest.cpp
 tcpservertest_DEPENDENCIES	= 	libtclPlus.la
@@ -136,8 +136,8 @@ tcpservertest_LDFLAGS	= 	-Wl,"-rpath-link=$(libdir)" @TCL_LIBS@ @CPPUNIT_LIBS@
 
 
 threadtests_DEPENENCIES = $(testableObjects)
-threadtests_SOURCES     = threadtests.cpp mutextests.cpp
-threadtests_LDADD      = $(testableObjects) TestRunner.lo \
+threadtests_SOURCES     = TestRunner.cpp threadtests.cpp mutextests.cpp
+threadtests_LDADD      = $(testableObjects)  \
                                 @top_builddir@/exception/libException.la \
                         @TCL_LIBS@ @CPPUNIT_LIBS@
 
