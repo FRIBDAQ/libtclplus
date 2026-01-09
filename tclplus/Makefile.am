@@ -104,8 +104,8 @@ clean-local:
 
 EXTRA_DIST = tkAppInit.c tclplus.xml
 
-### disabled for now, will have fox hook these back up
- noinst_PROGRAMS = tracetests interptests tcpservertest threadtests
+
+check_PROGRAMS = tracetests interptests tcpservertest threadtests
 
 tracetests_SOURCES = TestRunner.cpp \
 			ccallbacktest.cpp \
