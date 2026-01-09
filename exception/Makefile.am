@@ -40,7 +40,7 @@ install-data-local:
 #	        $(DESTDIR)/$(prefix)/include/CErrnoException.h
 
 
-noinst_PROGRAMS = unittests
+check_PROGRAMS = unittests
 unittests_SOURCES = TestRunner.cpp testException.cpp testErrnoException.cpp \
 	testStreamIOError.cpp testRangeError.cpp
 unittests_LDADD   = @CPPUNIT_LIBS@ libException.la
